@@ -1,0 +1,249 @@
+body {
+  font-family: "Segoe UI", sans-serif;
+  margin: 0;
+  background-color: #f8f8f8;
+  color: #2b2b2b;
+}
+
+.site-header {
+  background-color: #3e5a7b;
+  color: white;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.header-left h1 {
+  margin: 0;
+  font-size: 1.6rem;
+}
+
+.header-left .subtitle {
+  margin: 0;
+  font-size: 0.9rem;
+  color: #d2dbe7;
+}
+
+.main-nav {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.main-nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.main-nav a:hover,
+.main-nav a.active {
+  text-decoration: underline;
+}
+
+.menu-button {
+  display: none;
+  font-size: 2rem;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+.overlay-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(30, 30, 30, 0.95);
+  color: white;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 2000;
+  text-align: center;
+  padding: 2rem;
+}
+
+.overlay-menu.show {
+  display: flex;
+}
+
+.close-button {
+  position: absolute;
+  top: 1rem;
+  right: 1.5rem;
+  font-size: 2.5rem;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+.overlay-nav a {
+  color: rgba(255, 255, 255, 0.85);
+  text-decoration: none;
+  font-size: 1.2rem;
+  font-weight: 400;
+  margin: 0.7rem 0;
+  display: block;
+  letter-spacing: 0.5px;
+  transition: color 0.2s;
+}
+
+.overlay-nav a:hover {
+  color: #ffcc00;
+}
+
+.content {
+  max-width: 1000px;
+  margin: 2rem auto;
+  padding: 1rem;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+.hero-image {
+  width: 100%;
+  overflow: hidden;
+  border-radius: 12px 12px 0 0;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+}
+
+.hero-image img {
+  display: block;
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 8px 8px 0 0;
+}
+
+.text-section h2 {
+  font-size: 1.8rem;
+  color: #2b2b2b;
+}
+
+.text-section p {
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+.cta-button {
+  display: inline-block;
+  margin-top: 1.5rem;
+  background-color: #3e5a7b;
+  color: white;
+  padding: 0.7rem 1.5rem;
+  border-radius: 5px;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: background-color 0.3s;
+}
+
+.cta-button:hover {
+  background-color: #2e4560;
+}
+
+.site-footer {
+  text-align: center;
+  background-color: #e9edf2;
+  padding: 1rem;
+  margin-top: 2rem;
+  font-size: 0.9rem;
+}
+
+.site-footer a {
+  color: #4b0082;
+  text-decoration: none;
+  margin-left: 10px;
+}
+
+@media (max-width: 768px) {
+  .main-nav {
+    display: none;
+  }
+
+  .menu-button {
+    display: block;
+  }
+}
+
+.about-section,
+.beratung-section,
+.kosten-section,
+.kontakt-section,
+.impressum-section {
+  padding: 1rem;
+}
+
+.about-grid {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.profile-img {
+  width: 300px;
+  max-width: 100%;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.about-text,
+.beratung-section p,
+.kosten-section p,
+.kontakt-section p,
+.impressum-section p {
+  flex: 1;
+  min-width: 250px;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+.kontakt-formular {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.kontakt-formular label {
+  font-weight: 500;
+}
+
+.kontakt-formular input,
+.kontakt-formular textarea {
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-family: inherit;
+  font-size: 1rem;
+  width: 100%;
+  max-width: 600px;
+}
+
+.kontakt-formular button {
+  padding: 0.6rem 1.2rem;
+  background-color: #3e5a7b;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+  width: fit-content;
+}
+
+.kontakt-formular button:hover {
+  background-color: #2e4560;
+}

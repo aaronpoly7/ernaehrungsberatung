@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Startseite – Ernährungsberatung</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-left">
+      <h1>Ernährungsberatung</h1>
+      <p class="subtitle">Elektra Polychronidou</p>
+    </div>
+    <nav class="main-nav">
+      <a href="index.html" class="active">Startseite</a>
+      <a href="ueber-mich.html">Über mich</a>
+      <a href="beratung.html">Ernährungsberatung</a>
+      <a href="kosten.html">Kosten</a>
+      <a href="kontakt.html">Kontakt</a>
+    </nav>
+    <button class="menu-button" aria-label="Menü öffnen">&#9776;</button>
+  </header>
+
+  <div class="overlay-menu" id="menu">
+    <button class="close-button" aria-label="Menü schließen">&times;</button>
+    <nav class="overlay-nav">
+      <a href="index.html" class="active">Startseite</a>
+      <a href="ueber-mich.html">Über mich</a>
+      <a href="beratung.html">Ernährungsberatung</a>
+      <a href="kosten.html">Kosten</a>
+      <a href="kontakt.html">Kontakt</a>
+    </nav>
+  </div>
+
+  <main class="content">
+    <div class="hero-image">
+      <img src="index.jpg" alt="Frisches Gemüse auf Holzbrett">
+    </div>
+
+    <section class="text-section">
+      <h2>Mehr Wohlbefinden durch Ernährung</h2>
+      <p>Herzlich willkommen! Als staatlich anerkannte Ernährungsberaterin unterstütze ich Sie dabei, Ihre Gesundheit, Ihr Wohlbefinden und Ihre Lebensqualität gezielt zu fördern – durch ganzheitliche, wissenschaftlich fundierte Ernährungskonzepte.</p>
+
+      <h3>Mein Beratungsangebot richtet sich an:</h3>
+      <ul>
+        <li>Menschen mit chronischen Erkrankungen (z.&nbsp;B. Rheuma, Bluthochdruck)</li>
+        <li>Jugendliche und Erwachsene mit Übergewicht</li>
+        <li>Personen mit Nahrungsmittelunverträglichkeiten (Laktose, Fruktose etc.)</li>
+        <li>Familien, Schwangere und Senioren</li>
+      </ul>
+
+      <h3>Was Sie bei mir erwartet:</h3>
+      <ul>
+        <li>✅ Individuelle und empathische Beratung</li>
+        <li>✅ Flexible Termine telefonisch oder online</li>
+        <li>✅ Krankenkassenzuschuss möglich</li>
+        <li>✅ Realistische, alltagstaugliche Ernährungskonzepte</li>
+      </ul>
+
+      <div class="cta-box">
+        <p><strong>Jetzt kostenlosen Erstkontakt vereinbaren:</strong></p>
+        <p><a href="kontakt.html" class="cta-button">Kontakt aufnehmen</a></p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>© 2025 Elektra Polychronidou</p>
+    <a href="impressum.html">Impressum</a> |
+    <a href="datenschutz.html">Datenschutz</a>
+  </footer>
+
+  <script>
+    const menu = document.getElementById("menu");
+    const openBtn = document.querySelector(".menu-button");
+    const closeBtn = document.querySelector(".close-button");
+    const links = document.querySelectorAll(".overlay-nav a");
+
+    openBtn.addEventListener("click", () => {
+      menu.classList.add("show");
+    });
+
+    closeBtn.addEventListener("click", () => {
+      menu.classList.remove("show");
+    });
+
+    links.forEach(link => {
+      link.addEventListener("click", () => {
+        menu.classList.remove("show");
+      });
+    });
+  </script>
+</body>
+</html>

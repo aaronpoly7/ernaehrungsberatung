@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Datenschutz – Ernährungsberatung Elektra Polychronidou</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-left">
+      <h1>Ernährungsberatung</h1>
+      <p class="subtitle">Elektra Polychronidou</p>
+    </div>
+    <nav class="main-nav">
+      <a href="index.html">Startseite</a>
+      <a href="ueber-mich.html">Über mich</a>
+      <a href="beratung.html">Ernährungsberatung</a>
+      <a href="kosten.html">Kosten</a>
+      <a href="kontakt.html">Kontakt</a>
+    </nav>
+    <button class="menu-button" aria-label="Menü öffnen">&#9776;</button>
+  </header>
+
+  <main class="content impressum-section">
+    <h2>Datenschutzerklärung</h2>
+
+    <p>Der Schutz Ihrer persönlichen Daten ist mir ein besonderes Anliegen. Ich behandle Ihre personenbezogenen Daten vertraulich und entsprechend der gesetzlichen Datenschutzvorschriften sowie dieser Datenschutzerklärung.</p>
+
+    <h3>1. Verantwortliche Stelle</h3>
+    <p>
+      Elektra Polychronidou<br>
+      Treskowstraße 25<br>
+      13156 Berlin<br>
+      Telefon: 030 477 30 74<br>
+      E-Mail: <a href="mailto:elektra.p@gmx.de">elektra.p@gmx.de</a>
+    </p>
+
+    <h3>2. Datenerfassung auf dieser Website</h3>
+
+    <h4>Kontaktformular</h4>
+    <p>Wenn Sie mir per Kontaktformular Anfragen zukommen lassen, werden Ihre Angaben aus dem Formular inklusive der von Ihnen dort angegebenen Kontaktdaten an mich übermittelt. Diese Daten gebe ich nicht ohne Ihre Einwilligung weiter.</p>
+    <p>Der Versand der Formulardaten erfolgt über den Dienst <strong>formsubmit.co</strong>:</p>
+    <p>
+      Formsubmit LLC<br>
+      13 W 13th Street<br>
+      Wilmington, DE 19801, USA<br>
+      <a href="https://formsubmit.co/privacy-policy" target="_blank">Datenschutzerklärung von formsubmit.co</a>
+    </p>
+    <p>Die Verarbeitung Ihrer Daten erfolgt gemäß Art. 6 Abs. 1 lit. b DSGVO zur Durchführung vorvertraglicher Maßnahmen und zur Bearbeitung Ihres Anliegens.</p>
+
+    <h4>Server-Log-Dateien</h4>
+    <p>Der Hosting-Anbieter erhebt und speichert automatisch Informationen in sogenannten Server-Log-Dateien, die Ihr Browser automatisch übermittelt. Dies sind z. B.:</p>
+    <ul>
+      <li>Browsertyp und Browserversion</li>
+      <li>verwendetes Betriebssystem</li>
+      <li>Referrer URL</li>
+      <li>Hostname des zugreifenden Rechners</li>
+      <li>Uhrzeit der Serveranfrage</li>
+      <li>IP-Adresse</li>
+    </ul>
+    <p>Diese Daten sind nicht bestimmten Personen zuordenbar. Eine Zusammenführung dieser Daten mit anderen Datenquellen wird nicht vorgenommen.</p>
+
+    <h4>Google Maps</h4>
+    <p>Diese Website nutzt den Kartendienst Google Maps. Anbieter ist die Google Ireland Limited, Gordon House, Barrow Street, Dublin 4, Irland.</p>
+    <p>Zur Nutzung der Funktionen von Google Maps ist es notwendig, Ihre IP-Adresse zu speichern. Diese Informationen werden in der Regel an einen Server von Google in den USA übertragen und dort gespeichert.</p>
+
+    <h3>3. Ihre Rechte</h3>
+    <ul>
+      <li>Recht auf Auskunft (Art. 15 DSGVO)</li>
+      <li>Recht auf Berichtigung (Art. 16 DSGVO)</li>
+      <li>Recht auf Löschung (Art. 17 DSGVO)</li>
+      <li>Recht auf Einschränkung der Verarbeitung (Art. 18 DSGVO)</li>
+      <li>Recht auf Datenübertragbarkeit (Art. 20 DSGVO)</li>
+      <li>Widerspruchsrecht gegen die Verarbeitung (Art. 21 DSGVO)</li>
+    </ul>
+    <p>Wenn Sie glauben, dass die Verarbeitung Ihrer Daten gegen das Datenschutzrecht verstößt, steht Ihnen ein Beschwerderecht bei der zuständigen Aufsichtsbehörde zu.</p>
+
+    <h3>4. SSL-Verschlüsselung</h3>
+    <p>Diese Seite nutzt aus Sicherheitsgründen eine SSL-Verschlüsselung. Eine verschlüsselte Verbindung erkennen Sie daran, dass die Adresszeile des Browsers von „http://“ auf „https://“ wechselt.</p>
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; 2025 Elektra Polychronidou</p>
+    <a href="impressum.html">Impressum</a> |
+    <a href="datenschutz.html">Datenschutz</a>
+  </footer>
+
+  <script>
+    const menu = document.getElementById("menu");
+    const openBtn = document.querySelector(".menu-button");
+    const closeBtn = document.querySelector(".close-button");
+    const links = document.querySelectorAll(".overlay-nav a");
+
+    openBtn.addEventListener("click", () => {
+      menu.classList.add("show");
+    });
+
+    closeBtn.addEventListener("click", () => {
+      menu.classList.remove("show");
+    });
+
+    links.forEach(link => {
+      link.addEventListener("click", () => {
+        menu.classList.remove("show");
+      });
+    });
+  </script>
+</body>
+</html>

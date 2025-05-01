@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Über mich – Ernährungsberatung</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-left">
+      <h1>Ernährungsberatung</h1>
+      <p class="subtitle">Elektra Polychronidou</p>
+    </div>
+    <nav class="main-nav">
+      <a href="index.html">Startseite</a>
+      <a href="ueber-mich.html" class="active">Über mich</a>
+      <a href="beratung.html">Ernährungsberatung</a>
+      <a href="kosten.html">Kosten</a>
+      <a href="kontakt.html">Kontakt</a>
+    </nav>
+    <button class="menu-button" aria-label="Menü öffnen">&#9776;</button>
+  </header>
+
+  <div class="overlay-menu" id="menu">
+    <button class="close-button" aria-label="Menü schließen">&times;</button>
+    <nav class="overlay-nav">
+      <a href="index.html">Startseite</a>
+      <a href="ueber-mich.html" class="active">Über mich</a>
+      <a href="beratung.html">Ernährungsberatung</a>
+      <a href="kosten.html">Kosten</a>
+      <a href="kontakt.html">Kontakt</a>
+    </nav>
+  </div>
+
+  <main class="content">
+    <section class="about-section">
+      <div class="about-grid">
+        <img src="EP-Beratung.jpg" alt="Elektra Polychronidou" class="profile-img" />
+        <div class="about-text">
+          <h2>Über mich</h2>
+          <p>Mein Name ist Elektra Polychronidou. Ich bin staatlich anerkannte Ernährungsberaterin mit langjähriger Erfahrung in der individuellen Beratung von Menschen mit verschiedensten gesundheitlichen Bedürfnissen.</p>
+          <p>Mein Weg führte mich über ein naturwissenschaftliches Studium, berufliche Stationen im Gesundheitswesen und zahlreiche Fortbildungen hin zu meiner heutigen Tätigkeit. Ich verbinde wissenschaftlich fundierte Ansätze mit einem empathischen Blick für den Menschen.</p>
+          <p>Besonders am Herzen liegt mir die Unterstützung von Menschen mit chronischen Erkrankungen wie Rheuma, Jugendlichen mit Übergewicht sowie Personen mit Nahrungsmittelunverträglichkeiten.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="vita-section">
+      <h3>Mein beruflicher Weg</h3>
+      <ul class="vita-list">
+        <li><strong>Seit 2018:</strong> Leitende Diätassistentin am Immanuel Krankenhaus Berlin, Naturheilkunde</li>
+        <li><strong>Seit 2003:</strong> Ernährungsberaterin für Erwachsene & Kinder – u.a. Charité, Krankenkassen</li>
+        <li><strong>2005–2015:</strong> Medienarbeit: Ernährungsexpertin für ARD, Spiegel Online u.a.</li>
+        <li><strong>2009–2016:</strong> Studienarbeit u.a. am Deutschen Institut für Ernährungsforschung (DIfE)</li>
+        <li><strong>Seit 2007:</strong> Dozentin für Ernährung & Gesundheitsförderung – VHS, Schulen, Institute</li>
+        <li><strong>Regelmäßige Mitwirkung an Studien:</strong> Charité, NeuroCure, Bundesinstitut für Risikobewertung</li>
+      </ul>
+
+      <h3>Ausbildung & Qualifikation</h3>
+      <ul class="vita-list">
+        <li><strong>1995:</strong> Staatlich geprüfte Diätassistentin (UK Rudolf Virchow, Berlin)</li>
+        <li><strong>1985–1992:</strong> Lebensmittelchemie (Grund- und Hauptstudium, TU Berlin)</li>
+        <li><strong>Zusätzliche Qualifikationen:</strong> Ernährungsberaterin, Fastenleiterin, Anti-Diät-Coaching</li>
+        <li><strong>Laufende Fortbildungen:</strong> u.a. DGE, UGB, Deutsche Fastenakademie, NAKO</li>
+      </ul>
+
+      <h3>Schwerpunkte & Erfahrungen</h3>
+      <ul class="vita-list">
+        <li>Ernährungstherapie bei Rheuma, MS, Adipositas & Kinderernährung</li>
+        <li>Interdisziplinäre Beratung in Klinik- und Forschungskontexten</li>
+        <li>Langjährige Lehrerfahrung in Theorie & Praxis der Diätetik</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>© 2025 Elektra Polychronidou</p>
+    <a href="impressum.html">Impressum</a> |
+    <a href="datenschutz.html">Datenschutz</a>
+  </footer>
+
+  <script>
+    const menu = document.getElementById("menu");
+    const openBtn = document.querySelector(".menu-button");
+    const closeBtn = document.querySelector(".close-button");
+    const links = document.querySelectorAll(".overlay-nav a");
+
+    openBtn.addEventListener("click", () => {
+      menu.classList.add("show");
+    });
+
+    closeBtn.addEventListener("click", () => {
+      menu.classList.remove("show");
+    });
+
+    links.forEach(link => {
+      link.addEventListener("click", () => {
+        menu.classList.remove("show");
+      });
+    });
+  </script>
+</body>
+</html>

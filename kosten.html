@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kosten – Ernährungsberatung Elektra Polychronidou</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-left">
+      <h1>Ernährungsberatung</h1>
+      <p class="subtitle">Elektra Polychronidou</p>
+    </div>
+
+    <!-- Desktop-Navigation -->
+    <nav class="main-nav">
+      <a href="index.html">Startseite</a>
+      <a href="ueber-mich.html">Über mich</a>
+      <a href="beratung.html">Ernährungsberatung</a>
+      <a href="kosten.html" class="active">Kosten</a>
+      <a href="kontakt.html">Kontakt</a>
+    </nav>
+
+    <!-- Mobile Menübutton -->
+    <button class="menu-button" aria-label="Menü öffnen">&#9776;</button>
+  </header>
+
+  <!-- Mobile Overlay-Menü -->
+  <div class="overlay-menu" id="menu">
+    <button class="close-button" aria-label="Menü schließen">&times;</button>
+    <nav class="overlay-nav">
+      <a href="index.html">Startseite</a>
+      <a href="ueber-mich.html">Über mich</a>
+      <a href="beratung.html">Ernährungsberatung</a>
+      <a href="kosten.html" class="active">Kosten</a>
+      <a href="kontakt.html">Kontakt</a>
+    </nav>
+  </div>
+
+  <main class="content">
+    <section class="kosten-section">
+      <h2>Kosten und Kostenerstattung</h2>
+
+      <p>
+        Die Kosten für meine Ernährungsberatung orientieren sich an der Dauer und dem Umfang der Beratung.
+      </p>
+
+      <h3>Beispielpreise:</h3>
+      <ul class="kosten-liste">
+        <li><strong>Erstgespräch (60 Minuten):</strong> folgt</li>
+        <li><strong>Folgeberatung (je 30 Minuten):</strong> folgt</li>
+        <li><strong>Beratungspaket (z. B. 3 Termine):</strong> nach individueller Absprache</li>
+      </ul>
+
+      <h3>Krankenkassenübernahme</h3>
+      <p>
+        Ich bin staatlich zertifizierte Ernährungsberaterin, und viele gesetzliche Krankenkassen übernehmen einen großen Teil der Kosten.
+        Voraussetzung ist eine ärztliche Notwendigkeitsbescheinigung („Ärztliche Empfehlung für Ernährungsberatung“).
+      </p>
+
+      <p>
+        Die Bezuschussung variiert je nach Krankenkasse. Bitte erkundigen Sie sich vorab bei Ihrer Kasse oder sprechen Sie mich an – ich helfe Ihnen gerne weiter.
+      </p>
+
+      <p>
+        Sie erhalten von mir eine Rechnung zur Einreichung bei der Krankenkasse.
+      </p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+  <p>© 2025 Elektra Polychronidou</p>
+  <a href="impressum.html">Impressum</a> |
+  <a href="datenschutz.html">Datenschutz</a>
+</footer>
+
+
+  <script>
+    const menu = document.getElementById("menu");
+    const openBtn = document.querySelector(".menu-button");
+    const closeBtn = document.querySelector(".close-button");
+    const links = document.querySelectorAll(".overlay-nav a");
+
+    openBtn.addEventListener("click", () => {
+      menu.classList.add("show");
+    });
+
+    closeBtn.addEventListener("click", () => {
+      menu.classList.remove("show");
+    });
+
+    links.forEach(link => {
+      link.addEventListener("click", () => {
+        menu.classList.remove("show");
+      });
+    });
+  </script>
+</body>
+</html>
