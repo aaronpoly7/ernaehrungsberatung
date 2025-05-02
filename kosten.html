@@ -3,76 +3,83 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Kosten – Elektra Polychronidou</title>
+  <title>Kosten – Ernährungsberatung Elektra Polychronidou</title>
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="bg-white text-gray-900">
-  <!-- HEADER -->
-  <header class="bg-blue-700 text-white p-4 flex items-center justify-between relative z-50">
-    <a href="index.html" class="block">
-      <div>
-        <h1 class="text-xl font-bold">Ernährungsberatung</h1>
-        <p class="text-sm">Elektra Polychronidou</p>
-      </div>
+<body class="bg-gray-50 text-gray-800">
+
+  <!-- Header -->
+  <header class="bg-blue-900 text-white p-4 flex justify-between items-center">
+    <a href="index.html" class="flex flex-col">
+      <h1 class="text-xl font-semibold">Ernährungsberatung</h1>
+      <p class="text-sm text-blue-200">Elektra Polychronidou</p>
     </a>
-    <button id="menu-btn" class="text-white text-3xl md:hidden">&#9776;</button>
-    <nav class="hidden md:flex space-x-6 text-white">
-      <a href="index.html" class="hover:underline">Startseite</a>
-      <a href="ueber-mich.html" class="hover:underline">Über mich</a>
-      <a href="beratung.html" class="hover:underline">Ernährungsberatung</a>
+
+    <!-- Desktop Nav -->
+    <nav class="hidden md:flex space-x-6">
+      <a href="index.html">Startseite</a>
+      <a href="ueber-mich.html">Über mich</a>
+      <a href="beratung.html">Ernährungsberatung</a>
       <a href="kosten.html" class="underline">Kosten</a>
-      <a href="kontakt.html" class="hover:underline">Kontakt</a>
+      <a href="kontakt.html">Kontakt</a>
     </nav>
+
+    <!-- Mobile Menübutton -->
+    <button id="menu-btn" class="text-3xl md:hidden" aria-label="Menü öffnen">&#9776;</button>
   </header>
 
-  <!-- OVERLAY MENU -->
-  <div id="mobile-menu" class="fixed inset-0 bg-black bg-opacity-90 text-white hidden z-40 flex-col items-center justify-center text-xl space-y-6">
-    <button id="close-menu" class="absolute top-4 right-6 text-4xl">&times;</button>
-    <a href="index.html" class="hover:underline">Startseite</a>
-    <a href="ueber-mich.html" class="hover:underline">Über mich</a>
-    <a href="beratung.html" class="hover:underline">Ernährungsberatung</a>
-    <a href="kosten.html" class="underline">Kosten</a>
-    <a href="kontakt.html" class="hover:underline">Kontakt</a>
+  <!-- Mobile Menü -->
+  <div id="mobile-menu" class="hidden fixed inset-0 bg-black bg-opacity-90 text-white z-50 flex flex-col items-center justify-center space-y-6">
+    <button id="close-menu" class="absolute top-4 right-6 text-4xl" aria-label="Menü schließen">&times;</button>
+    <nav class="flex flex-col space-y-4 text-xl text-center">
+      <a href="index.html">Startseite</a>
+      <a href="ueber-mich.html">Über mich</a>
+      <a href="beratung.html">Ernährungsberatung</a>
+      <a href="kosten.html" class="underline">Kosten</a>
+      <a href="kontakt.html">Kontakt</a>
+    </nav>
   </div>
 
-  <!-- MAIN CONTENT -->
-  <main class="max-w-3xl mx-auto px-4 py-8">
-    <h2 class="text-2xl font-bold mb-4">Kosten und Kostenerstattung</h2>
-    <p class="mb-4">
-      Die Kosten für meine Ernährungsberatung orientieren sich an der Dauer und dem Umfang der Beratung.
-    </p>
+  <!-- Inhalt -->
+  <main class="max-w-3xl mx-auto mt-6 p-4 bg-white shadow rounded-lg">
+    <section class="space-y-6">
+      <h2 class="text-2xl font-semibold">Kosten und Kostenerstattung</h2>
 
-    <h3 class="text-xl font-semibold mt-6 mb-2">Beispielpreise:</h3>
-    <ul class="list-disc pl-5 space-y-1 mb-4">
-      <li><strong>Erstgespräch (60 Minuten):</strong> folgt</li>
-      <li><strong>Folgeberatung (je 30 Minuten):</strong> folgt</li>
-      <li><strong>Beratungspaket (z. B. 3 Termine):</strong> nach individueller Absprache</li>
-    </ul>
+      <p>Die Kosten für meine Ernährungsberatung orientieren sich an der Dauer und dem Umfang der Beratung.</p>
 
-    <h3 class="text-xl font-semibold mt-6 mb-2">Krankenkassenübernahme</h3>
-    <p class="mb-4">
-      Ich bin staatlich zertifizierte Ernährungsberaterin, und viele gesetzliche Krankenkassen übernehmen einen großen Teil der Kosten.
-      Voraussetzung ist eine ärztliche Notwendigkeitsbescheinigung („Ärztliche Empfehlung für Ernährungsberatung“).
-    </p>
-    <p>
-      Die Bezuschussung variiert je nach Krankenkasse. Bitte erkundigen Sie sich bei Ihrer Krankenkasse nach den konkreten Bedingungen.
-    </p>
+      <h3 class="text-xl font-semibold">Beispielpreise:</h3>
+      <ul class="list-disc list-inside space-y-1">
+        <li><strong>Erstgespräch (60 Minuten):</strong> 90 €</li>
+        <li><strong>Folgeberatung (je 30 Minuten):</strong> 45 €</li>
+        <li><strong>Beratungspaket (z. B. 3 Termine):</strong> nach individueller Absprache</li>
+      </ul>
+
+      <h3 class="text-xl font-semibold">Krankenkassenübernahme</h3>
+      <p>Ich bin staatlich zertifizierte Ernährungsberaterin. Viele gesetzliche Krankenkassen übernehmen einen Teil der Kosten. Voraussetzung ist eine ärztliche Notwendigkeitsbescheinigung.</p>
+      <p>Bitte erkundigen Sie sich bei Ihrer Kasse oder kontaktieren Sie mich – ich helfe gern weiter. Sie erhalten eine Rechnung zur Einreichung bei Ihrer Krankenkasse.</p>
+
+      <div class="mt-6 p-4 bg-blue-50 border-l-4 border-blue-400 rounded">
+        <p class="mb-2 font-medium">Fragen zur Abrechnung oder Erstattung?</p>
+        <a href="kontakt.html" class="inline-block bg-blue-800 text-white px-5 py-2 rounded hover:bg-blue-700">Jetzt Kontakt aufnehmen</a>
+      </div>
+    </section>
   </main>
 
-  <!-- FOOTER -->
-  <footer class="bg-gray-100 text-center p-4 mt-12 text-sm">
+  <!-- Footer -->
+  <footer class="text-center text-sm text-gray-600 mt-10 mb-4">
     <p>© 2025 Elektra Polychronidou</p>
-    <div class="mt-1">
+    <p>
       <a href="impressum.html" class="text-blue-700 hover:underline">Impressum</a> |
       <a href="datenschutz.html" class="text-blue-700 hover:underline">Datenschutz</a>
-    </div>
+    </p>
   </footer>
 
-  <!-- SCRIPT -->
+  <!-- JS für Mobile-Menü -->
   <script>
     document.getElementById("menu-btn").addEventListener("click", () => {
       document.getElementById("mobile-menu").classList.remove("hidden");
     });
+
     document.getElementById("close-menu").addEventListener("click", () => {
       document.getElementById("mobile-menu").classList.add("hidden");
     });
