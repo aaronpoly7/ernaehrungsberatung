@@ -4,58 +4,59 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Ernährungsberatung – Elektra Polychronidou</title>
-  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
-  <header class="site-header">
-    <div class="header-left">
-      <h1>Ernährungsberatung</h1>
-      <p class="subtitle">Elektra Polychronidou</p>
+<body class="bg-gray-100 text-gray-800">
+
+  <!-- Header -->
+  <header class="bg-blue-900 text-white sticky top-0 z-50 shadow-md">
+    <div class="max-w-5xl mx-auto px-4 py-4 flex justify-between items-center">
+      <div>
+        <h1 class="text-xl font-bold">Ernährungsberatung</h1>
+        <p class="text-sm text-blue-200">Elektra Polychronidou</p>
+      </div>
+      <nav class="hidden md:flex space-x-4">
+        <a href="index.html">Startseite</a>
+        <a href="ueber-mich.html">Über mich</a>
+        <a href="beratung.html" class="underline">Ernährungsberatung</a>
+        <a href="kosten.html">Kosten</a>
+        <a href="kontakt.html">Kontakt</a>
+      </nav>
+      <button class="md:hidden text-2xl" id="menu-button">☰</button>
     </div>
-
-    <!-- Desktop-Navigation -->
-    <nav class="main-nav">
-      <a href="index.html">Startseite</a>
-      <a href="ueber-mich.html">Über mich</a>
-      <a href="beratung.html" class="active">Ernährungsberatung</a>
-      <a href="kosten.html">Kosten</a>
-      <a href="kontakt.html">Kontakt</a>
-    </nav>
-
-    <!-- Mobile Menübutton -->
-    <button class="menu-button" aria-label="Menü öffnen">&#9776;</button>
   </header>
 
-  <!-- Mobile Overlay-Menü -->
-  <div class="overlay-menu" id="menu">
-    <button class="close-button" aria-label="Menü schließen">&times;</button>
-    <nav class="overlay-nav">
-      <a href="index.html">Startseite</a>
-      <a href="ueber-mich.html">Über mich</a>
-      <a href="beratung.html" class="active">Ernährungsberatung</a>
-      <a href="kosten.html">Kosten</a>
-      <a href="kontakt.html">Kontakt</a>
-    </nav>
+  <!-- Mobile Menü -->
+  <div id="mobile-menu" class="fixed inset-0 bg-black bg-opacity-90 text-white hidden flex-col items-center justify-center space-y-6 text-xl z-40">
+    <button id="close-button" class="absolute top-6 right-6 text-3xl">×</button>
+    <a href="index.html">Startseite</a>
+    <a href="ueber-mich.html">Über mich</a>
+    <a href="beratung.html" class="underline">Ernährungsberatung</a>
+    <a href="kosten.html">Kosten</a>
+    <a href="kontakt.html">Kontakt</a>
   </div>
 
-  <main class="content">
-    <section class="beratung-section">
-      <h2>Individuelle Ernährungsberatung</h2>
+  <!-- Main Content -->
+  <main class="max-w-3xl mx-auto bg-white shadow-md rounded-md mt-6 p-6">
+    <section class="space-y-6">
+      <h2 class="text-2xl font-bold text-blue-900">Individuelle Ernährungsberatung</h2>
       <p>
         Eine ausgewogene Ernährung ist ein zentraler Baustein für Gesundheit, Lebensqualität und Wohlbefinden.
         Ich biete individuelle Beratung für verschiedene Lebenssituationen und Gesundheitsziele an.
       </p>
 
-      <h3>Meine Schwerpunkte:</h3>
-      <ul class="beratung-liste">
-        <li>Rheuma und entzündliche Erkrankungen</li>
-        <li>Beratung für Kinder, Jugendliche und Familien</li>
-        <li>Unterstützung bei Übergewicht und Adipositas</li>
-        <li>Nahrungsmittelunverträglichkeiten</li>
-        <li>Herz-Kreislauf-Erkrankungen, Bluthochdruck, Diabetes</li>
-        <li>Nachhaltige Ernährung im Alltag</li>
-        <li>Ernährung in besonderen Lebensphasen (Schwangerschaft, Alter etc.)</li>
-      </ul>
+      <div>
+        <h3 class="text-xl font-semibold text-blue-900">Meine Schwerpunkte:</h3>
+        <ul class="list-disc list-inside mt-2 space-y-1">
+          <li>Rheuma und entzündliche Erkrankungen</li>
+          <li>Beratung für Kinder, Jugendliche und Familien</li>
+          <li>Unterstützung bei Übergewicht und Adipositas</li>
+          <li>Nahrungsmittelunverträglichkeiten</li>
+          <li>Herz-Kreislauf-Erkrankungen, Bluthochdruck, Diabetes</li>
+          <li>Nachhaltige Ernährung im Alltag</li>
+          <li>Ernährung in besonderen Lebensphasen (Schwangerschaft, Alter etc.)</li>
+        </ul>
+      </div>
 
       <p>
         Gemeinsam erarbeiten wir realistische und praktikable Ziele, die sich in Ihren Alltag integrieren lassen.
@@ -64,32 +65,23 @@
     </section>
   </main>
 
- <footer class="site-footer">
-  <p>© 2025 Elektra Polychronidou</p>
-  <a href="impressum.html">Impressum</a> |
-  <a href="datenschutz.html">Datenschutz</a>
-</footer>
+  <!-- Footer -->
+  <footer class="text-center text-sm text-gray-600 mt-10 mb-4">
+    <p>© 2025 Elektra Polychronidou</p>
+    <p>
+      <a href="impressum.html" class="underline">Impressum</a> |
+      <a href="datenschutz.html" class="underline">Datenschutz</a>
+    </p>
+  </footer>
 
-
+  <!-- Script für Menü -->
   <script>
-    const menu = document.getElementById("menu");
-    const openBtn = document.querySelector(".menu-button");
-    const closeBtn = document.querySelector(".close-button");
-    const links = document.querySelectorAll(".overlay-nav a");
+    const menu = document.getElementById("mobile-menu");
+    const openBtn = document.getElementById("menu-button");
+    const closeBtn = document.getElementById("close-button");
 
-    openBtn.addEventListener("click", () => {
-      menu.classList.add("show");
-    });
-
-    closeBtn.addEventListener("click", () => {
-      menu.classList.remove("show");
-    });
-
-    links.forEach(link => {
-      link.addEventListener("click", () => {
-        menu.classList.remove("show");
-      });
-    });
+    openBtn.addEventListener("click", () => menu.classList.remove("hidden"));
+    closeBtn.addEventListener("click", () => menu.classList.add("hidden"));
   </script>
 </body>
 </html>
