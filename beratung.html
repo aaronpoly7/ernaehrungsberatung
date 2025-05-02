@@ -6,58 +6,56 @@
   <title>Ernährungsberatung – Elektra Polychronidou</title>
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="bg-gray-100 text-gray-800">
-
-  <!-- Header -->
-  <header class="bg-blue-900 text-white sticky top-0 z-50 shadow-md">
-    <div class="max-w-5xl mx-auto px-4 py-4 flex justify-between items-center">
-      <a href="index.html" class="block hover:underline cursor-pointer">
-  <h1 class="text-xl font-bold">Ernährungsberatung</h1>
-  <p class="text-sm text-blue-200">Elektra Polychronidou</p>
-</a>
-
-      <nav class="hidden md:flex space-x-4">
-        <a href="index.html">Startseite</a>
-        <a href="ueber-mich.html">Über mich</a>
-        <a href="beratung.html" class="underline">Ernährungsberatung</a>
-        <a href="kosten.html">Kosten</a>
-        <a href="kontakt.html">Kontakt</a>
-      </nav>
-      <button class="md:hidden text-2xl" id="menu-button">☰</button>
-    </div>
+<body class="bg-white text-gray-900">
+  <!-- HEADER -->
+  <header class="bg-blue-700 text-white p-4 flex items-center justify-between relative z-50">
+    <a href="index.html" class="block">
+      <div>
+        <h1 class="text-xl font-bold">Ernährungsberatung</h1>
+        <p class="text-sm">Elektra Polychronidou</p>
+      </div>
+    </a>
+    <button id="menu-btn" class="text-white text-3xl md:hidden">
+      &#9776;
+    </button>
+    <nav class="hidden md:flex space-x-6 text-white">
+      <a href="index.html" class="hover:underline">Startseite</a>
+      <a href="ueber-mich.html" class="hover:underline">Über mich</a>
+      <a href="beratung.html" class="underline">Ernährungsberatung</a>
+      <a href="kosten.html" class="hover:underline">Kosten</a>
+      <a href="kontakt.html" class="hover:underline">Kontakt</a>
+    </nav>
   </header>
 
-  <!-- Mobile Menü -->
-  <div id="mobile-menu" class="fixed inset-0 bg-black bg-opacity-90 text-white hidden flex-col items-center justify-center space-y-6 text-xl z-40">
-    <button id="close-button" class="absolute top-6 right-6 text-3xl">×</button>
-    <a href="index.html">Startseite</a>
-    <a href="ueber-mich.html">Über mich</a>
+  <!-- OVERLAY MENU -->
+  <div id="mobile-menu" class="fixed inset-0 bg-black bg-opacity-90 text-white hidden z-40 flex-col items-center justify-center text-xl space-y-6">
+    <button id="close-menu" class="absolute top-4 right-6 text-4xl">&times;</button>
+    <a href="index.html" class="hover:underline">Startseite</a>
+    <a href="ueber-mich.html" class="hover:underline">Über mich</a>
     <a href="beratung.html" class="underline">Ernährungsberatung</a>
-    <a href="kosten.html">Kosten</a>
-    <a href="kontakt.html">Kontakt</a>
+    <a href="kosten.html" class="hover:underline">Kosten</a>
+    <a href="kontakt.html" class="hover:underline">Kontakt</a>
   </div>
 
-  <!-- Main Content -->
-  <main class="max-w-3xl mx-auto bg-white shadow-md rounded-md mt-6 p-6">
-    <section class="space-y-6">
-      <h2 class="text-2xl font-bold text-blue-900">Individuelle Ernährungsberatung</h2>
-      <p>
+  <!-- MAIN -->
+  <main class="max-w-3xl mx-auto px-4 py-8">
+    <section class="mb-10">
+      <h2 class="text-2xl font-bold mb-4">Individuelle Ernährungsberatung</h2>
+      <p class="mb-4">
         Eine ausgewogene Ernährung ist ein zentraler Baustein für Gesundheit, Lebensqualität und Wohlbefinden.
         Ich biete individuelle Beratung für verschiedene Lebenssituationen und Gesundheitsziele an.
       </p>
 
-      <div>
-        <h3 class="text-xl font-semibold text-blue-900">Meine Schwerpunkte:</h3>
-        <ul class="list-disc list-inside mt-2 space-y-1">
-          <li>Rheuma und entzündliche Erkrankungen</li>
-          <li>Beratung für Kinder, Jugendliche und Familien</li>
-          <li>Unterstützung bei Übergewicht und Adipositas</li>
-          <li>Nahrungsmittelunverträglichkeiten</li>
-          <li>Herz-Kreislauf-Erkrankungen, Bluthochdruck, Diabetes</li>
-          <li>Nachhaltige Ernährung im Alltag</li>
-          <li>Ernährung in besonderen Lebensphasen (Schwangerschaft, Alter etc.)</li>
-        </ul>
-      </div>
+      <h3 class="text-xl font-semibold mt-6 mb-2">Meine Schwerpunkte:</h3>
+      <ul class="list-disc pl-5 space-y-1 mb-4">
+        <li>Rheuma und entzündliche Erkrankungen</li>
+        <li>Beratung für Kinder, Jugendliche und Familien</li>
+        <li>Unterstützung bei Übergewicht und Adipositas</li>
+        <li>Nahrungsmittelunverträglichkeiten</li>
+        <li>Herz-Kreislauf-Erkrankungen, Bluthochdruck, Diabetes</li>
+        <li>Nachhaltige Ernährung im Alltag</li>
+        <li>Ernährung in besonderen Lebensphasen (Schwangerschaft, Alter etc.)</li>
+      </ul>
 
       <p>
         Gemeinsam erarbeiten wir realistische und praktikable Ziele, die sich in Ihren Alltag integrieren lassen.
@@ -66,23 +64,23 @@
     </section>
   </main>
 
-  <!-- Footer -->
-  <footer class="text-center text-sm text-gray-600 mt-10 mb-4">
+  <!-- FOOTER -->
+  <footer class="bg-gray-100 text-center p-4 mt-12 text-sm">
     <p>© 2025 Elektra Polychronidou</p>
-    <p>
-      <a href="impressum.html" class="underline">Impressum</a> |
-      <a href="datenschutz.html" class="underline">Datenschutz</a>
-    </p>
+    <div class="mt-1">
+      <a href="impressum.html" class="text-blue-700 hover:underline">Impressum</a> |
+      <a href="datenschutz.html" class="text-blue-700 hover:underline">Datenschutz</a>
+    </div>
   </footer>
 
-  <!-- Script für Menü -->
+  <!-- SCRIPT -->
   <script>
-    const menu = document.getElementById("mobile-menu");
-    const openBtn = document.getElementById("menu-button");
-    const closeBtn = document.getElementById("close-button");
-
-    openBtn.addEventListener("click", () => menu.classList.remove("hidden"));
-    closeBtn.addEventListener("click", () => menu.classList.add("hidden"));
+    document.getElementById("menu-btn").addEventListener("click", () => {
+      document.getElementById("mobile-menu").classList.remove("hidden");
+    });
+    document.getElementById("close-menu").addEventListener("click", () => {
+      document.getElementById("mobile-menu").classList.add("hidden");
+    });
   </script>
 </body>
 </html>
