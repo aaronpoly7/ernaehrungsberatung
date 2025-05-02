@@ -9,24 +9,40 @@
 <body class="bg-gray-50 text-gray-800">
 
   <!-- Header -->
-  <header class="bg-blue-900 text-white p-4 flex justify-between items-center">
-    <a href="index.html" class="flex flex-col">
-      <h1 class="text-xl font-semibold">Ernährungsberatung</h1>
-      <p class="text-sm text-blue-200">Elektra Polychronidou</p>
+  <header class="bg-blue-900 text-white shadow sticky top-0 z-50">
+  <div class="max-w-6xl mx-auto flex justify-between items-center px-4 py-3">
+    <a href="index.html" class="text-lg font-semibold">
+      Ernährungsberatung<br><span class="text-sm text-blue-200">Elektra Polychronidou</span>
     </a>
-
-    <!-- Desktop Nav -->
     <nav class="hidden md:flex space-x-6">
-      <a href="index.html" class="underline">Startseite</a>
-      <a href="ueber-mich.html">Über mich</a>
-      <a href="beratung.html">Ernährungsberatung</a>
-      <a href="kosten.html">Kosten</a>
-      <a href="kontakt.html">Kontakt</a>
+      <a href="index.html" class="hover:underline">Startseite</a>
+      <a href="ueber-mich.html" class="hover:underline">Über mich</a>
+      <div class="relative group">
+        <a href="beratung.html" class="hover:underline">Ernährungsberatung</a>
+        <div class="absolute hidden group-hover:block bg-white text-black mt-2 py-2 shadow-lg rounded w-56 z-50">
+          <a href="ernaehrung-bei-erkrankungen.html" class="block px-4 py-2 hover:bg-gray-100">Erkrankungen</a>
+          <a href="familien-ernaehrung.html" class="block px-4 py-2 hover:bg-gray-100">Familien & Kinder</a>
+          <a href="fastenkonzepte.html" class="block px-4 py-2 hover:bg-gray-100">Fastenkonzepte</a>
+        </div>
+      </div>
+      <a href="kosten.html" class="hover:underline">Kosten</a>
+      <a href="kontakt.html" class="hover:underline">Kontakt</a>
     </nav>
-
-    <!-- Mobile Menu Button -->
-    <button id="menu-btn" class="text-3xl md:hidden" aria-label="Menü öffnen">&#9776;</button>
-  </header>
+    <button id="menuBtn" class="text-2xl md:hidden">&#9776;</button>
+  </div>
+  <div id="mobileMenu" class="hidden md:hidden bg-blue-800 text-white px-4 pb-4">
+    <a href="index.html" class="block py-1">Startseite</a>
+    <a href="ueber-mich.html" class="block py-1">Über mich</a>
+    <a href="beratung.html" class="block py-1">Ernährungsberatung</a>
+    <div class="pl-4">
+      <a href="ernaehrung-bei-erkrankungen.html" class="block py-1">Erkrankungen</a>
+      <a href="familien-ernaehrung.html" class="block py-1">Familien & Kinder</a>
+      <a href="fastenkonzepte.html" class="block py-1">Fastenkonzepte</a>
+    </div>
+    <a href="kosten.html" class="block py-1">Kosten</a>
+    <a href="kontakt.html" class="block py-1">Kontakt</a>
+  </div>
+</header>
 
   <!-- Mobile Menu Overlay -->
   <div id="mobile-menu" class="hidden fixed inset-0 bg-black bg-opacity-90 text-white z-50 flex flex-col items-center justify-center space-y-6">
