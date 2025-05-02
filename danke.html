@@ -3,61 +3,63 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Danke – Elektra Polychronidou</title>
+  <title>Danke – Ernährungsberatung Elektra Polychronidou</title>
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="bg-white text-gray-900">
-  <!-- HEADER -->
-  <header class="bg-blue-700 text-white p-4 flex items-center justify-between relative z-50">
-    <a href="index.html" class="block">
-      <div>
-        <h1 class="text-xl font-bold">Ernährungsberatung</h1>
-        <p class="text-sm">Elektra Polychronidou</p>
-      </div>
+<body class="bg-gray-50 text-gray-800">
+
+  <!-- Header -->
+  <header class="bg-blue-900 text-white p-4 flex justify-between items-center">
+    <a href="index.html" class="flex flex-col">
+      <h1 class="text-xl font-semibold">Ernährungsberatung</h1>
+      <p class="text-sm text-blue-200">Elektra Polychronidou</p>
     </a>
-    <button id="menu-btn" class="text-white text-3xl md:hidden">&#9776;</button>
-    <nav class="hidden md:flex space-x-6 text-white">
+
+    <nav class="hidden md:flex space-x-6">
       <a href="index.html">Startseite</a>
       <a href="ueber-mich.html">Über mich</a>
       <a href="beratung.html">Ernährungsberatung</a>
       <a href="kosten.html">Kosten</a>
       <a href="kontakt.html">Kontakt</a>
     </nav>
+
+    <button id="menu-btn" class="text-3xl md:hidden" aria-label="Menü öffnen">&#9776;</button>
   </header>
 
-  <!-- MOBILE MENU -->
-  <div id="mobile-menu" class="fixed inset-0 bg-black bg-opacity-90 text-white hidden z-40 flex-col items-center justify-center text-xl space-y-6">
-    <button id="close-menu" class="absolute top-4 right-6 text-4xl">&times;</button>
-    <a href="index.html">Startseite</a>
-    <a href="ueber-mich.html">Über mich</a>
-    <a href="beratung.html">Ernährungsberatung</a>
-    <a href="kosten.html">Kosten</a>
-    <a href="kontakt.html">Kontakt</a>
+  <!-- Mobile Menü -->
+  <div id="mobile-menu" class="hidden fixed inset-0 bg-black bg-opacity-90 text-white z-50 flex flex-col items-center justify-center space-y-6">
+    <button id="close-menu" class="absolute top-4 right-6 text-4xl" aria-label="Menü schließen">&times;</button>
+    <nav class="flex flex-col space-y-4 text-xl text-center">
+      <a href="index.html">Startseite</a>
+      <a href="ueber-mich.html">Über mich</a>
+      <a href="beratung.html">Ernährungsberatung</a>
+      <a href="kosten.html">Kosten</a>
+      <a href="kontakt.html">Kontakt</a>
+    </nav>
   </div>
 
-  <!-- MAIN -->
-  <main class="max-w-xl mx-auto px-4 py-20 text-center space-y-6">
-    <h2 class="text-3xl font-bold text-green-600">Vielen Dank für Ihre Nachricht!</h2>
-    <p class="text-lg">Ich werde mich so bald wie möglich bei Ihnen melden.</p>
-    <a href="index.html" class="inline-block mt-6 px-6 py-3 bg-blue-700 text-white rounded hover:bg-blue-800 transition">
-      Zurück zur Startseite
-    </a>
+  <!-- Inhalt -->
+  <main class="max-w-xl mx-auto mt-16 p-6 bg-white shadow-lg rounded-lg text-center">
+    <h2 class="text-2xl font-semibold text-green-600 mb-4">Vielen Dank!</h2>
+    <p class="mb-4">Ihre Nachricht wurde erfolgreich übermittelt. Ich melde mich so bald wie möglich bei Ihnen zurück.</p>
+    <a href="index.html" class="inline-block mt-6 px-5 py-2 bg-blue-900 text-white rounded hover:bg-blue-800 transition">Zurück zur Startseite</a>
   </main>
 
-  <!-- FOOTER -->
-  <footer class="bg-gray-100 text-center p-4 text-sm">
+  <!-- Footer -->
+  <footer class="text-center text-sm text-gray-600 mt-10 mb-4">
     <p>© 2025 Elektra Polychronidou</p>
-    <div class="mt-1">
+    <p>
       <a href="impressum.html" class="text-blue-700 hover:underline">Impressum</a> |
       <a href="datenschutz.html" class="text-blue-700 hover:underline">Datenschutz</a>
-    </div>
+    </p>
   </footer>
 
-  <!-- SCRIPT -->
+  <!-- Menü-Script -->
   <script>
     document.getElementById("menu-btn").addEventListener("click", () => {
       document.getElementById("mobile-menu").classList.remove("hidden");
     });
+
     document.getElementById("close-menu").addEventListener("click", () => {
       document.getElementById("mobile-menu").classList.add("hidden");
     });
