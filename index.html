@@ -4,92 +4,92 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Startseite – Ernährungsberatung</title>
-  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
-  <header class="site-header">
-    <div class="header-left">
-      <h1>Ernährungsberatung</h1>
-      <p class="subtitle">Elektra Polychronidou</p>
+<body class="bg-gray-100 text-gray-900">
+
+  <!-- HEADER -->
+  <header class="bg-blue-900 text-white sticky top-0 z-50 shadow-md">
+    <div class="max-w-5xl mx-auto px-4 py-4 flex justify-between items-center">
+      <div>
+        <h1 class="text-xl font-bold">Ernährungsberatung</h1>
+        <p class="text-sm text-blue-200">Elektra Polychronidou</p>
+      </div>
+      <nav class="hidden md:flex space-x-4">
+        <a href="index.html" class="underline">Startseite</a>
+        <a href="ueber-mich.html">Über mich</a>
+        <a href="beratung.html">Ernährungsberatung</a>
+        <a href="kosten.html">Kosten</a>
+        <a href="kontakt.html">Kontakt</a>
+      </nav>
+      <button class="md:hidden text-2xl" id="menu-button">☰</button>
     </div>
-    <nav class="main-nav">
-      <a href="index.html" class="active">Startseite</a>
-      <a href="ueber-mich.html">Über mich</a>
-      <a href="beratung.html">Ernährungsberatung</a>
-      <a href="kosten.html">Kosten</a>
-      <a href="kontakt.html">Kontakt</a>
-    </nav>
-    <button class="menu-button" aria-label="Menü öffnen">&#9776;</button>
   </header>
 
-  <div class="overlay-menu" id="menu">
-    <button class="close-button" aria-label="Menü schließen">&times;</button>
-    <nav class="overlay-nav">
-      <a href="index.html" class="active">Startseite</a>
-      <a href="ueber-mich.html">Über mich</a>
-      <a href="beratung.html">Ernährungsberatung</a>
-      <a href="kosten.html">Kosten</a>
-      <a href="kontakt.html">Kontakt</a>
-    </nav>
+  <!-- MOBILE MENU -->
+  <div id="mobile-menu" class="fixed inset-0 bg-black bg-opacity-90 text-white hidden flex-col items-center justify-center space-y-6 text-xl z-40">
+    <button id="close-button" class="absolute top-6 right-6 text-3xl">×</button>
+    <a href="index.html" class="underline">Startseite</a>
+    <a href="ueber-mich.html">Über mich</a>
+    <a href="beratung.html">Ernährungsberatung</a>
+    <a href="kosten.html">Kosten</a>
+    <a href="kontakt.html">Kontakt</a>
   </div>
 
-  <main class="content">
-    <div class="hero-image">
-      <img src="index.jpg" alt="Frisches Gemüse auf Holzbrett">
+  <!-- CONTENT -->
+  <main class="max-w-3xl mx-auto bg-white shadow-md rounded-md mt-6 p-6">
+    <div class="rounded-md overflow-hidden mb-6">
+      <img src="index.jpg" alt="Frisches Gemüse auf Holzbrett" class="w-full object-cover max-h-96" />
     </div>
 
-    <section class="text-section">
-      <h2>Mehr Wohlbefinden durch Ernährung</h2>
+    <section class="space-y-6">
+      <h2 class="text-2xl font-bold text-blue-900">Mehr Wohlbefinden durch Ernährung</h2>
       <p>Herzlich willkommen! Als staatlich anerkannte Diätassistentin unterstütze ich Sie dabei, Ihre Gesundheit, Ihr Wohlbefinden und Ihre Lebensqualität gezielt zu fördern – durch ganzheitliche, wissenschaftlich fundierte Ernährungskonzepte.</p>
 
-      <h3>Mein Beratungsangebot richtet sich an:</h3>
-      <ul>
-        <li>Menschen mit chronischen Erkrankungen (z.&nbsp;B. Rheuma, Bluthochdruck)</li>
-        <li>Jugendliche und Erwachsene mit Übergewicht</li>
-        <li>Personen mit Nahrungsmittelunverträglichkeiten (Laktose, Fruktose etc.)</li>
-        <li>Familien, Schwangere und Senioren</li>
-      </ul>
+      <div>
+        <h3 class="font-semibold text-lg mt-4 mb-2">Mein Beratungsangebot richtet sich an:</h3>
+        <ul class="list-disc list-inside space-y-1">
+          <li>Menschen mit chronischen Erkrankungen (z. B. Rheuma, Bluthochdruck)</li>
+          <li>Jugendliche und Erwachsene mit Übergewicht</li>
+          <li>Personen mit Nahrungsmittelunverträglichkeiten (Laktose, Fruktose etc.)</li>
+          <li>Familien, Schwangere und Senioren</li>
+        </ul>
+      </div>
 
-      <h3>Was Sie bei mir erwartet:</h3>
-      <ul>
-        <li>✅ Individuelle und empathische Beratung</li>
-        <li>✅ Flexible Termine vor Ort, telefonisch oder online</li>
-        <li>✅ Krankenkassenzuschuss möglich</li>
-        <li>✅ Realistische, alltagstaugliche Ernährungskonzepte</li>
-      </ul>
+      <div>
+        <h3 class="font-semibold text-lg mt-6 mb-2">Was Sie bei mir erwartet:</h3>
+        <ul class="list-disc list-inside space-y-1">
+          <li>✅ Individuelle und empathische Beratung</li>
+          <li>✅ Flexible Termine vor Ort, telefonisch oder online</li>
+          <li>✅ Krankenkassenzuschuss möglich</li>
+          <li>✅ Realistische, alltagstaugliche Ernährungskonzepte</li>
+        </ul>
+      </div>
 
-      <div class="cta-box">
-        <p><strong>Jetzt kostenlosen Erstkontakt vereinbaren:</strong></p>
-        <p><a href="kontakt.html" class="cta-button">Kontakt aufnehmen</a></p>
+      <div class="bg-blue-50 border-l-4 border-blue-300 p-4 rounded-md mt-6 text-center">
+        <p class="font-semibold">Jetzt kostenlosen Erstkontakt vereinbaren:</p>
+        <a href="kontakt.html" class="mt-2 inline-block bg-blue-900 text-white px-6 py-2 rounded hover:bg-blue-800 transition">Kontakt aufnehmen</a>
       </div>
     </section>
   </main>
 
-  <footer class="site-footer">
+  <!-- FOOTER -->
+  <footer class="text-center text-sm text-gray-600 mt-10 mb-4">
     <p>© 2025 Elektra Polychronidou</p>
-    <a href="impressum.html">Impressum</a> |
-    <a href="datenschutz.html">Datenschutz</a>
+    <p>
+      <a href="impressum.html" class="underline">Impressum</a> |
+      <a href="datenschutz.html" class="underline">Datenschutz</a>
+    </p>
   </footer>
 
+  <!-- JS für Mobile Menü -->
   <script>
-    const menu = document.getElementById("menu");
-    const openBtn = document.querySelector(".menu-button");
-    const closeBtn = document.querySelector(".close-button");
-    const links = document.querySelectorAll(".overlay-nav a");
+    const openBtn = document.getElementById("menu-button");
+    const closeBtn = document.getElementById("close-button");
+    const mobileMenu = document.getElementById("mobile-menu");
 
-    openBtn.addEventListener("click", () => {
-      menu.classList.add("show");
-    });
-
-    closeBtn.addEventListener("click", () => {
-      menu.classList.remove("show");
-    });
-
-    links.forEach(link => {
-      link.addEventListener("click", () => {
-        menu.classList.remove("show");
-      });
-    });
+    openBtn.addEventListener("click", () => mobileMenu.classList.remove("hidden"));
+    closeBtn.addEventListener("click", () => mobileMenu.classList.add("hidden"));
   </script>
 </body>
 </html>
