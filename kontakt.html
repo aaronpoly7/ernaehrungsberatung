@@ -3,90 +3,107 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Kontakt – Elektra Polychronidou</title>
+  <title>Kontakt – Ernährungsberatung Elektra Polychronidou</title>
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="bg-white text-gray-900">
-  <!-- HEADER -->
-  <header class="bg-blue-700 text-white p-4 flex items-center justify-between relative z-50">
-    <a href="index.html" class="block">
-      <div>
-        <h1 class="text-xl font-bold">Ernährungsberatung</h1>
-        <p class="text-sm">Elektra Polychronidou</p>
-      </div>
+<body class="bg-gray-50 text-gray-800">
+
+  <!-- Header -->
+  <header class="bg-blue-900 text-white p-4 flex justify-between items-center">
+    <a href="index.html" class="flex flex-col">
+      <h1 class="text-xl font-semibold">Ernährungsberatung</h1>
+      <p class="text-sm text-blue-200">Elektra Polychronidou</p>
     </a>
-    <button id="menu-btn" class="text-white text-3xl md:hidden">&#9776;</button>
-    <nav class="hidden md:flex space-x-6 text-white">
-      <a href="index.html" class="hover:underline">Startseite</a>
-      <a href="ueber-mich.html" class="hover:underline">Über mich</a>
-      <a href="beratung.html" class="hover:underline">Ernährungsberatung</a>
-      <a href="kosten.html" class="hover:underline">Kosten</a>
+
+    <!-- Desktop Nav -->
+    <nav class="hidden md:flex space-x-6">
+      <a href="index.html">Startseite</a>
+      <a href="ueber-mich.html">Über mich</a>
+      <a href="beratung.html">Ernährungsberatung</a>
+      <a href="kosten.html">Kosten</a>
       <a href="kontakt.html" class="underline">Kontakt</a>
     </nav>
+
+    <!-- Mobile Menübutton -->
+    <button id="menu-btn" class="text-3xl md:hidden" aria-label="Menü öffnen">&#9776;</button>
   </header>
 
-  <!-- OVERLAY MENU -->
-  <div id="mobile-menu" class="fixed inset-0 bg-black bg-opacity-90 text-white hidden z-40 flex-col items-center justify-center text-xl space-y-6">
-    <button id="close-menu" class="absolute top-4 right-6 text-4xl">&times;</button>
-    <a href="index.html" class="hover:underline">Startseite</a>
-    <a href="ueber-mich.html" class="hover:underline">Über mich</a>
-    <a href="beratung.html" class="hover:underline">Ernährungsberatung</a>
-    <a href="kosten.html" class="hover:underline">Kosten</a>
-    <a href="kontakt.html" class="underline">Kontakt</a>
+  <!-- Mobile Menü -->
+  <div id="mobile-menu" class="hidden fixed inset-0 bg-black bg-opacity-90 text-white z-50 flex flex-col items-center justify-center space-y-6">
+    <button id="close-menu" class="absolute top-4 right-6 text-4xl" aria-label="Menü schließen">&times;</button>
+    <nav class="flex flex-col space-y-4 text-xl text-center">
+      <a href="index.html">Startseite</a>
+      <a href="ueber-mich.html">Über mich</a>
+      <a href="beratung.html">Ernährungsberatung</a>
+      <a href="kosten.html">Kosten</a>
+      <a href="kontakt.html" class="underline">Kontakt</a>
+    </nav>
   </div>
 
-  <!-- MAIN CONTENT -->
-  <main class="max-w-3xl mx-auto px-4 py-8">
-    <h2 class="text-2xl font-bold mb-6">Kontakt</h2>
-    <p class="mb-4">Sie haben Fragen oder möchten einen Termin vereinbaren? Schreiben Sie mir gerne eine Nachricht oder rufen Sie an.</p>
+  <!-- Inhalt -->
+  <main class="max-w-3xl mx-auto mt-6 p-4 bg-white shadow rounded-lg">
+    <section class="space-y-6">
+      <h2 class="text-2xl font-semibold">Kontakt</h2>
+      <p>Sie haben Fragen oder möchten einen Termin vereinbaren? Schreiben Sie mir gern oder rufen Sie direkt an.</p>
 
-    <div class="mb-8">
-      <h3 class="text-lg font-semibold">Kontaktdaten</h3>
-      <p class="mt-2"><strong>Elektra Polychronidou</strong><br>
-      Treskowstraße 25<br>
-      13156 Berlin</p>
-      <p class="mt-2">Telefon: <a href="tel:0304773074" class="text-blue-700 underline">030 477 30 74</a><br>
-      E-Mail: <a href="mailto:elektra.p@gmx.de" class="text-blue-700 underline">elektra.p@gmx.de</a></p>
-    </div>
+      <div class="space-y-2">
+        <p><strong>Elektra Polychronidou</strong><br />
+        Treskowstraße 25<br />
+        13156 Berlin</p>
 
-    <div class="aspect-w-16 aspect-h-9 mb-8">
-      <iframe class="w-full rounded shadow"
-        src="https://www.google.com/maps?q=Elektra%20Polychronidou%20Berlin&output=embed"
-        loading="lazy" allowfullscreen></iframe>
-    </div>
+        <p>Telefon: <a href="tel:+49304773074" class="text-blue-700 hover:underline">030 477 30 74</a><br />
+        E-Mail: <a href="mailto:elektra.p@gmx.de" class="text-blue-700 hover:underline">elektra.p@gmx.de</a></p>
+      </div>
 
-    <form class="space-y-4" action="danke.html" method="post">
-      <h3 class="text-lg font-semibold">Kontaktformular</h3>
-      <div>
-        <label for="name" class="block font-medium">Name:</label>
-        <input type="text" id="name" name="name" class="w-full border border-gray-300 p-2 rounded" required />
+      <!-- Google Maps -->
+      <div class="my-4">
+        <iframe class="w-full rounded shadow" height="300"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d441.11504502077514!2d13.39206986959115!3d52.58480111309227!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47a849ac39b70331%3A0x184e865856aac94f!2sErn%C3%A4hrungsberatung%20Elektra%20Polychronidou!5e1!3m2!1sde!2sjp!4v1746093055291!5m2!1sde!2sjp"
+          style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
       </div>
-      <div>
-        <label for="email" class="block font-medium">E-Mail:</label>
-        <input type="email" id="email" name="email" class="w-full border border-gray-300 p-2 rounded" required />
-      </div>
-      <div>
-        <label for="message" class="block font-medium">Nachricht:</label>
-        <textarea id="message" name="message" rows="5" class="w-full border border-gray-300 p-2 rounded" required></textarea>
-      </div>
-      <button type="submit" class="bg-blue-700 text-white px-4 py-2 rounded hover:bg-blue-800">Nachricht senden</button>
-    </form>
+
+      <!-- Formular -->
+      <h3 class="text-xl font-semibold">Kontaktformular</h3>
+      <form action="https://formsubmit.co/elektra.p@gmx.de" method="POST" class="space-y-4">
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_next" value="danke.html">
+        
+        <div>
+          <label for="name" class="block font-medium">Name:</label>
+          <input type="text" id="name" name="name" required class="w-full border border-gray-300 rounded px-3 py-2" />
+        </div>
+
+        <div>
+          <label for="email" class="block font-medium">E-Mail:</label>
+          <input type="email" id="email" name="email" required class="w-full border border-gray-300 rounded px-3 py-2" />
+        </div>
+
+        <div>
+          <label for="nachricht" class="block font-medium">Nachricht:</label>
+          <textarea id="nachricht" name="nachricht" rows="5" required class="w-full border border-gray-300 rounded px-3 py-2"></textarea>
+        </div>
+
+        <button type="submit" class="bg-blue-800 text-white px-6 py-2 rounded hover:bg-blue-700">Nachricht senden</button>
+      </form>
+    </section>
   </main>
 
-  <!-- FOOTER -->
-  <footer class="bg-gray-100 text-center p-4 mt-12 text-sm">
+  <!-- Footer -->
+  <footer class="text-center text-sm text-gray-600 mt-10 mb-4">
     <p>© 2025 Elektra Polychronidou</p>
-    <div class="mt-1">
+    <p>
       <a href="impressum.html" class="text-blue-700 hover:underline">Impressum</a> |
       <a href="datenschutz.html" class="text-blue-700 hover:underline">Datenschutz</a>
-    </div>
+    </p>
   </footer>
 
-  <!-- SCRIPT -->
+  <!-- JS Mobile-Menü -->
   <script>
     document.getElementById("menu-btn").addEventListener("click", () => {
       document.getElementById("mobile-menu").classList.remove("hidden");
     });
+
     document.getElementById("close-menu").addEventListener("click", () => {
       document.getElementById("mobile-menu").classList.add("hidden");
     });
