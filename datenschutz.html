@@ -1,109 +1,99 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Datenschutz – Ernährungsberatung Elektra Polychronidou</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Datenschutz – Elektra Polychronidou</title>
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
-  <header class="site-header">
-    <div class="header-left">
-      <h1>Ernährungsberatung</h1>
-      <p class="subtitle">Elektra Polychronidou</p>
-    </div>
-    <nav class="main-nav">
+<body class="bg-white text-gray-900">
+  <!-- HEADER -->
+  <header class="bg-blue-700 text-white p-4 flex items-center justify-between relative z-50">
+    <a href="index.html" class="block">
+      <div>
+        <h1 class="text-xl font-bold">Ernährungsberatung</h1>
+        <p class="text-sm">Elektra Polychronidou</p>
+      </div>
+    </a>
+    <button id="menu-btn" class="text-white text-3xl md:hidden">&#9776;</button>
+    <nav class="hidden md:flex space-x-6 text-white">
       <a href="index.html">Startseite</a>
       <a href="ueber-mich.html">Über mich</a>
       <a href="beratung.html">Ernährungsberatung</a>
       <a href="kosten.html">Kosten</a>
       <a href="kontakt.html">Kontakt</a>
     </nav>
-    <button class="menu-button" aria-label="Menü öffnen">&#9776;</button>
   </header>
 
-  <main class="content impressum-section">
-    <h2>Datenschutzerklärung</h2>
+  <!-- OVERLAY MENU -->
+  <div id="mobile-menu" class="fixed inset-0 bg-black bg-opacity-90 text-white hidden z-40 flex-col items-center justify-center text-xl space-y-6">
+    <button id="close-menu" class="absolute top-4 right-6 text-4xl">&times;</button>
+    <a href="index.html">Startseite</a>
+    <a href="ueber-mich.html">Über mich</a>
+    <a href="beratung.html">Ernährungsberatung</a>
+    <a href="kosten.html">Kosten</a>
+    <a href="kontakt.html">Kontakt</a>
+  </div>
 
-    <p>Der Schutz Ihrer persönlichen Daten ist mir ein besonderes Anliegen. Ich behandle Ihre personenbezogenen Daten vertraulich und entsprechend der gesetzlichen Datenschutzvorschriften sowie dieser Datenschutzerklärung.</p>
+  <!-- MAIN CONTENT -->
+  <main class="max-w-4xl mx-auto px-4 py-10 space-y-6">
+    <h2 class="text-2xl font-bold mb-4">Datenschutzerklärung</h2>
 
-    <h3>1. Verantwortliche Stelle</h3>
-    <p>
-      Elektra Polychronidou<br>
-      Treskowstraße 25<br>
-      13156 Berlin<br>
-      Telefon: 030 477 30 74<br>
-      E-Mail: <a href="mailto:elektra.p@gmx.de">elektra.p@gmx.de</a>
-    </p>
+    <section class="space-y-4">
+      <p><strong>Datenschutz auf einen Blick:</strong> Ihre personenbezogenen Daten werden auf dieser Website so sparsam wie möglich und nur gemäß der DSGVO erhoben und verarbeitet.</p>
 
-    <h3>2. Datenerfassung auf dieser Website</h3>
+      <h3 class="text-xl font-semibold mt-6">Verantwortliche Stelle</h3>
+      <p>
+        Elektra Polychronidou<br />
+        Treskowstraße 25<br />
+        13156 Berlin<br />
+        E-Mail: <a href="mailto:elektra.p@gmx.de" class="text-blue-700 underline">elektra.p@gmx.de</a>
+      </p>
 
-    <h4>Kontaktformular</h4>
-    <p>Wenn Sie mir per Kontaktformular Anfragen zukommen lassen, werden Ihre Angaben aus dem Formular inklusive der von Ihnen dort angegebenen Kontaktdaten an mich übermittelt. Diese Daten gebe ich nicht ohne Ihre Einwilligung weiter.</p>
-    <p>Der Versand der Formulardaten erfolgt über den Dienst <strong>formsubmit.co</strong>:</p>
-    <p>
-      Formsubmit LLC<br>
-      13 W 13th Street<br>
-      Wilmington, DE 19801, USA<br>
-      <a href="https://formsubmit.co/privacy-policy" target="_blank">Datenschutzerklärung von formsubmit.co</a>
-    </p>
-    <p>Die Verarbeitung Ihrer Daten erfolgt gemäß Art. 6 Abs. 1 lit. b DSGVO zur Durchführung vorvertraglicher Maßnahmen und zur Bearbeitung Ihres Anliegens.</p>
+      <h3 class="text-xl font-semibold mt-6">Welche Daten werden erfasst?</h3>
+      <ul class="list-disc ml-6 space-y-2">
+        <li>Technische Daten beim Besuch der Website (IP-Adresse, Browsertyp etc.)</li>
+        <li>Kontaktdaten, wenn Sie mir per Formular oder E-Mail schreiben</li>
+      </ul>
 
-    <h4>Server-Log-Dateien</h4>
-    <p>Der Hosting-Anbieter erhebt und speichert automatisch Informationen in sogenannten Server-Log-Dateien, die Ihr Browser automatisch übermittelt. Dies sind z. B.:</p>
-    <ul>
-      <li>Browsertyp und Browserversion</li>
-      <li>verwendetes Betriebssystem</li>
-      <li>Referrer URL</li>
-      <li>Hostname des zugreifenden Rechners</li>
-      <li>Uhrzeit der Serveranfrage</li>
-      <li>IP-Adresse</li>
-    </ul>
-    <p>Diese Daten sind nicht bestimmten Personen zuordenbar. Eine Zusammenführung dieser Daten mit anderen Datenquellen wird nicht vorgenommen.</p>
+      <h3 class="text-xl font-semibold mt-6">Zweck der Datenerhebung</h3>
+      <p>Ihre Daten werden nur verwendet, um Anfragen zu beantworten und ggf. gesetzliche Verpflichtungen zu erfüllen. Es findet keine Weitergabe an Dritte ohne Ihre Zustimmung statt.</p>
 
-    <h4>Google Maps</h4>
-    <p>Diese Website nutzt den Kartendienst Google Maps. Anbieter ist die Google Ireland Limited, Gordon House, Barrow Street, Dublin 4, Irland.</p>
-    <p>Zur Nutzung der Funktionen von Google Maps ist es notwendig, Ihre IP-Adresse zu speichern. Diese Informationen werden in der Regel an einen Server von Google in den USA übertragen und dort gespeichert.</p>
+      <h3 class="text-xl font-semibold mt-6">Cookies</h3>
+      <p>Diese Website verwendet keine Tracking-Cookies. Session-Cookies, die technisch notwendig sind, werden nach Verlassen der Seite gelöscht.</p>
 
-    <h3>3. Ihre Rechte</h3>
-    <ul>
-      <li>Recht auf Auskunft (Art. 15 DSGVO)</li>
-      <li>Recht auf Berichtigung (Art. 16 DSGVO)</li>
-      <li>Recht auf Löschung (Art. 17 DSGVO)</li>
-      <li>Recht auf Einschränkung der Verarbeitung (Art. 18 DSGVO)</li>
-      <li>Recht auf Datenübertragbarkeit (Art. 20 DSGVO)</li>
-      <li>Widerspruchsrecht gegen die Verarbeitung (Art. 21 DSGVO)</li>
-    </ul>
-    <p>Wenn Sie glauben, dass die Verarbeitung Ihrer Daten gegen das Datenschutzrecht verstößt, steht Ihnen ein Beschwerderecht bei der zuständigen Aufsichtsbehörde zu.</p>
+      <h3 class="text-xl font-semibold mt-6">Kontaktformular</h3>
+      <p>Wenn Sie über das Formular Kontakt aufnehmen, werden Ihre Angaben zur Bearbeitung der Anfrage gespeichert. Eine Weitergabe erfolgt nicht ohne Ihre Einwilligung.</p>
 
-    <h3>4. SSL-Verschlüsselung</h3>
-    <p>Diese Seite nutzt aus Sicherheitsgründen eine SSL-Verschlüsselung. Eine verschlüsselte Verbindung erkennen Sie daran, dass die Adresszeile des Browsers von „http://“ auf „https://“ wechselt.</p>
+      <h3 class="text-xl font-semibold mt-6">Ihre Rechte</h3>
+      <ul class="list-disc ml-6 space-y-2">
+        <li>Auskunft über gespeicherte Daten</li>
+        <li>Berichtigung, Sperrung oder Löschung</li>
+        <li>Widerruf Ihrer Einwilligung</li>
+        <li>Beschwerde bei der zuständigen Datenschutzbehörde</li>
+      </ul>
+
+      <h3 class="text-xl font-semibold mt-6">SSL-Verschlüsselung</h3>
+      <p>Diese Seite nutzt eine SSL-Verschlüsselung zur sicheren Übertragung von Daten. Sie erkennen dies an der Adresszeile „https://“ und dem Schloss-Symbol im Browser.</p>
+    </section>
   </main>
 
-  <footer class="site-footer">
-    <p>&copy; 2025 Elektra Polychronidou</p>
-    <a href="impressum.html">Impressum</a> |
-    <a href="datenschutz.html">Datenschutz</a>
+  <!-- FOOTER -->
+  <footer class="bg-gray-100 text-center p-4 mt-12 text-sm">
+    <p>© 2025 Elektra Polychronidou</p>
+    <div class="mt-1">
+      <a href="impressum.html" class="text-blue-700 hover:underline">Impressum</a> |
+      <a href="datenschutz.html" class="text-blue-700 hover:underline">Datenschutz</a>
+    </div>
   </footer>
 
+  <!-- SCRIPT -->
   <script>
-    const menu = document.getElementById("menu");
-    const openBtn = document.querySelector(".menu-button");
-    const closeBtn = document.querySelector(".close-button");
-    const links = document.querySelectorAll(".overlay-nav a");
-
-    openBtn.addEventListener("click", () => {
-      menu.classList.add("show");
+    document.getElementById("menu-btn").addEventListener("click", () => {
+      document.getElementById("mobile-menu").classList.remove("hidden");
     });
-
-    closeBtn.addEventListener("click", () => {
-      menu.classList.remove("show");
-    });
-
-    links.forEach(link => {
-      link.addEventListener("click", () => {
-        menu.classList.remove("show");
-      });
+    document.getElementById("close-menu").addEventListener("click", () => {
+      document.getElementById("mobile-menu").classList.add("hidden");
     });
   </script>
 </body>
