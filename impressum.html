@@ -3,110 +3,103 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Impressum – Ernährungsberatung Elektra Polychronidou</title>
-  <link rel="stylesheet" href="style.css" />
+  <title>Impressum – Elektra Polychronidou</title>
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
-  <header class="site-header">
-    <div class="header-left">
-      <h1>Ernährungsberatung</h1>
-      <p class="subtitle">Elektra Polychronidou</p>
-    </div>
-
-    <!-- Desktop-Navigation -->
-    <nav class="main-nav">
-      <a href="index.html">Startseite</a>
+<body class="bg-white text-gray-900">
+  <!-- HEADER -->
+  <header class="bg-blue-700 text-white p-4 flex items-center justify-between relative z-50">
+    <a href="index.html" class="block">
+      <div>
+        <h1 class="text-xl font-bold">Ernährungsberatung</h1>
+        <p class="text-sm">Elektra Polychronidou</p>
+      </div>
+    </a>
+    <button id="menu-btn" class="text-white text-3xl md:hidden">&#9776;</button>
+    <nav class="hidden md:flex space-x-6 text-white">
+      <a href="index.html" class="hover:underline">Startseite</a>
       <a href="ueber-mich.html">Über mich</a>
       <a href="beratung.html">Ernährungsberatung</a>
       <a href="kosten.html">Kosten</a>
       <a href="kontakt.html">Kontakt</a>
     </nav>
-
-    <!-- Mobile Menübutton -->
-    <button class="menu-button" aria-label="Menü öffnen">&#9776;</button>
   </header>
 
-  <!-- Mobile Overlay-Menü -->
-  <div class="overlay-menu" id="menu">
-    <button class="close-button" aria-label="Menü schließen">&times;</button>
-    <nav class="overlay-nav">
-      <a href="index.html">Startseite</a>
-      <a href="ueber-mich.html">Über mich</a>
-      <a href="beratung.html">Ernährungsberatung</a>
-      <a href="kosten.html">Kosten</a>
-      <a href="kontakt.html">Kontakt</a>
-    </nav>
+  <!-- OVERLAY MENU -->
+  <div id="mobile-menu" class="fixed inset-0 bg-black bg-opacity-90 text-white hidden z-40 flex-col items-center justify-center text-xl space-y-6">
+    <button id="close-menu" class="absolute top-4 right-6 text-4xl">&times;</button>
+    <a href="index.html" class="hover:underline">Startseite</a>
+    <a href="ueber-mich.html">Über mich</a>
+    <a href="beratung.html">Ernährungsberatung</a>
+    <a href="kosten.html">Kosten</a>
+    <a href="kontakt.html">Kontakt</a>
   </div>
 
-  <main class="content">
-    <section class="impressum-section">
-      <h2>Impressum</h2>
+  <!-- MAIN CONTENT -->
+  <main class="max-w-3xl mx-auto px-4 py-8">
+    <h2 class="text-2xl font-bold mb-6">Impressum</h2>
 
-      <p><strong>Angaben gemäß §5 TMG</strong></p>
-      <p>
-        Elektra Polychronidou<br />
-        Treskowstraße 25<br />
-        13156 Berlin<br />
-        Deutschland
-      </p>
+    <section class="space-y-4">
+      <div>
+        <p class="font-semibold">Angaben gemäß § 5 TMG</p>
+        <p>
+          Elektra Polychronidou<br>
+          Treskowstraße 25<br>
+          13156 Berlin<br>
+          Deutschland
+        </p>
+      </div>
 
-      <p><strong>Kontakt</strong></p>
-      <p>
-        Telefon: 030 477 30 74<br />
-        E-Mail: <a href="mailto:elektra.p@gmx.de">elektra.p@gmx.de</a>
-      </p>
+      <div>
+        <p class="font-semibold">Kontakt</p>
+        <p>
+          Telefon: <a href="tel:+49304773074" class="text-blue-700 underline">030 477 30 74</a><br>
+          E-Mail: <a href="mailto:elektra.p@gmx.de" class="text-blue-700 underline">elektra.p@gmx.de</a>
+        </p>
+      </div>
 
-      <p><strong>Verantwortlich für den Inhalt nach §55 Abs. 2 RStV</strong></p>
-      <p>
-        Elektra Polychronidou<br />
-        Treskowstraße 25<br />
-        13156 Berlin
-      </p>
+      <div>
+        <p class="font-semibold">Verantwortlich für den Inhalt nach § 55 Abs. 2 RStV</p>
+        <p>
+          Elektra Polychronidou<br>
+          Treskowstraße 25<br>
+          13156 Berlin
+        </p>
+      </div>
 
-      <p><strong>Berufliche Angaben</strong></p>
-      <p>Staatlich anerkannte Ernährungsberaterin</p>
+      <div>
+        <p class="font-semibold">Berufliche Angaben</p>
+        <p>Staatlich anerkannte Diätassistentin</p>
+      </div>
 
-      <p><strong>Haftung für Inhalte</strong></p>
-      <p>
-        Als Diensteanbieter bin ich gemäß §7 Abs.1 TMG für eigene Inhalte auf diesen Seiten nach den allgemeinen Gesetzen verantwortlich.
-        Nach §§8 bis 10 TMG bin ich als Diensteanbieter jedoch nicht verpflichtet, übermittelte oder gespeicherte fremde Informationen zu überwachen
-        oder nach Umständen zu forschen, die auf eine rechtswidrige Tätigkeit hinweisen.
-      </p>
+      <div>
+        <p class="font-semibold">Haftung für Inhalte</p>
+        <p>Die Inhalte unserer Seiten wurden mit größter Sorgfalt erstellt. Für die Richtigkeit, Vollständigkeit und Aktualität der Inhalte können wir jedoch keine Gewähr übernehmen.</p>
+      </div>
 
-      <p><strong>Urheberrecht</strong></p>
-      <p>
-        Die durch die Seitenbetreiberin erstellten Inhalte und Werke auf diesen Seiten unterliegen dem deutschen Urheberrecht.
-        Die Vervielfältigung, Bearbeitung, Verbreitung und jede Art der Verwertung außerhalb der Grenzen des Urheberrechtes
-        bedürfen der schriftlichen Zustimmung der Autorin bzw. Erstellerin.
-      </p>
+      <div>
+        <p class="font-semibold">Urheberrecht</p>
+        <p>Die durch die Seitenbetreiberin erstellten Inhalte und Werke auf diesen Seiten unterliegen dem deutschen Urheberrecht. Die Vervielfältigung, Bearbeitung, Verbreitung und jede Art der Verwertung außerhalb der Grenzen des Urheberrechtes bedürfen der schriftlichen Zustimmung.</p>
+      </div>
     </section>
   </main>
 
-  <footer class="site-footer">
-  <p>© 2025 Elektra Polychronidou</p>
-  <a href="impressum.html">Impressum</a> |
-  <a href="datenschutz.html">Datenschutz</a>
-</footer>
+  <!-- FOOTER -->
+  <footer class="bg-gray-100 text-center p-4 mt-12 text-sm">
+    <p>© 2025 Elektra Polychronidou</p>
+    <div class="mt-1">
+      <a href="impressum.html" class="text-blue-700 hover:underline">Impressum</a> |
+      <a href="datenschutz.html" class="text-blue-700 hover:underline">Datenschutz</a>
+    </div>
+  </footer>
 
-
+  <!-- SCRIPT -->
   <script>
-    const menu = document.getElementById("menu");
-    const openBtn = document.querySelector(".menu-button");
-    const closeBtn = document.querySelector(".close-button");
-    const links = document.querySelectorAll(".overlay-nav a");
-
-    openBtn.addEventListener("click", () => {
-      menu.classList.add("show");
+    document.getElementById("menu-btn").addEventListener("click", () => {
+      document.getElementById("mobile-menu").classList.remove("hidden");
     });
-
-    closeBtn.addEventListener("click", () => {
-      menu.classList.remove("show");
-    });
-
-    links.forEach(link => {
-      link.addEventListener("click", () => {
-        menu.classList.remove("show");
-      });
+    document.getElementById("close-menu").addEventListener("click", () => {
+      document.getElementById("mobile-menu").classList.add("hidden");
     });
   </script>
 </body>
