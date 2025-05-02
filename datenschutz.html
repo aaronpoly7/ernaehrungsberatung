@@ -3,95 +3,88 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Datenschutz – Elektra Polychronidou</title>
+  <title>Datenschutz – Ernährungsberatung Elektra Polychronidou</title>
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="bg-white text-gray-900">
-  <!-- HEADER -->
-  <header class="bg-blue-700 text-white p-4 flex items-center justify-between relative z-50">
-    <a href="index.html" class="block">
-      <div>
-        <h1 class="text-xl font-bold">Ernährungsberatung</h1>
-        <p class="text-sm">Elektra Polychronidou</p>
-      </div>
+<body class="bg-gray-50 text-gray-800">
+
+  <!-- Header -->
+  <header class="bg-blue-900 text-white p-4 flex justify-between items-center">
+    <a href="index.html" class="flex flex-col">
+      <h1 class="text-xl font-semibold">Ernährungsberatung</h1>
+      <p class="text-sm text-blue-200">Elektra Polychronidou</p>
     </a>
-    <button id="menu-btn" class="text-white text-3xl md:hidden">&#9776;</button>
-    <nav class="hidden md:flex space-x-6 text-white">
+
+    <nav class="hidden md:flex space-x-6">
       <a href="index.html">Startseite</a>
       <a href="ueber-mich.html">Über mich</a>
       <a href="beratung.html">Ernährungsberatung</a>
       <a href="kosten.html">Kosten</a>
       <a href="kontakt.html">Kontakt</a>
     </nav>
+
+    <button id="menu-btn" class="text-3xl md:hidden" aria-label="Menü öffnen">&#9776;</button>
   </header>
 
-  <!-- OVERLAY MENU -->
-  <div id="mobile-menu" class="fixed inset-0 bg-black bg-opacity-90 text-white hidden z-40 flex-col items-center justify-center text-xl space-y-6">
-    <button id="close-menu" class="absolute top-4 right-6 text-4xl">&times;</button>
-    <a href="index.html">Startseite</a>
-    <a href="ueber-mich.html">Über mich</a>
-    <a href="beratung.html">Ernährungsberatung</a>
-    <a href="kosten.html">Kosten</a>
-    <a href="kontakt.html">Kontakt</a>
+  <!-- Mobile Menü -->
+  <div id="mobile-menu" class="hidden fixed inset-0 bg-black bg-opacity-90 text-white z-50 flex flex-col items-center justify-center space-y-6">
+    <button id="close-menu" class="absolute top-4 right-6 text-4xl" aria-label="Menü schließen">&times;</button>
+    <nav class="flex flex-col space-y-4 text-xl text-center">
+      <a href="index.html">Startseite</a>
+      <a href="ueber-mich.html">Über mich</a>
+      <a href="beratung.html">Ernährungsberatung</a>
+      <a href="kosten.html">Kosten</a>
+      <a href="kontakt.html">Kontakt</a>
+    </nav>
   </div>
 
-  <!-- MAIN CONTENT -->
-  <main class="max-w-4xl mx-auto px-4 py-10 space-y-6">
-    <h2 class="text-2xl font-bold mb-4">Datenschutzerklärung</h2>
+  <!-- Inhalt -->
+  <main class="max-w-3xl mx-auto mt-6 p-4 bg-white shadow rounded-lg">
+    <section class="space-y-6">
+      <h2 class="text-2xl font-semibold">Datenschutzerklärung</h2>
 
-    <section class="space-y-4">
-      <p><strong>Datenschutz auf einen Blick:</strong> Ihre personenbezogenen Daten werden auf dieser Website so sparsam wie möglich und nur gemäß der DSGVO erhoben und verarbeitet.</p>
+      <p>Der Schutz Ihrer persönlichen Daten ist uns ein besonderes Anliegen. Wir behandeln Ihre personenbezogenen Daten vertraulich und entsprechend der gesetzlichen Datenschutzvorschriften sowie dieser Datenschutzerklärung.</p>
 
-      <h3 class="text-xl font-semibold mt-6">Verantwortliche Stelle</h3>
-      <p>
-        Elektra Polychronidou<br />
-        Treskowstraße 25<br />
-        13156 Berlin<br />
-        E-Mail: <a href="mailto:e.polychronidou@gmail.com" class="text-blue-700 underline">e.polychronidou@gmail.com</a>
-      </p>
-
-      <h3 class="text-xl font-semibold mt-6">Welche Daten werden erfasst?</h3>
-      <ul class="list-disc ml-6 space-y-2">
-        <li>Technische Daten beim Besuch der Website (IP-Adresse, Browsertyp etc.)</li>
-        <li>Kontaktdaten, wenn Sie mir per Formular oder E-Mail schreiben</li>
-      </ul>
-
-      <h3 class="text-xl font-semibold mt-6">Zweck der Datenerhebung</h3>
-      <p>Ihre Daten werden nur verwendet, um Anfragen zu beantworten und ggf. gesetzliche Verpflichtungen zu erfüllen. Es findet keine Weitergabe an Dritte ohne Ihre Zustimmung statt.</p>
-
-      <h3 class="text-xl font-semibold mt-6">Cookies</h3>
-      <p>Diese Website verwendet keine Tracking-Cookies. Session-Cookies, die technisch notwendig sind, werden nach Verlassen der Seite gelöscht.</p>
+      <h3 class="text-xl font-semibold mt-6">Allgemeine Hinweise</h3>
+      <p>Die Nutzung unserer Website ist in der Regel ohne Angabe personenbezogener Daten möglich. Soweit auf unseren Seiten personenbezogene Daten (z.&nbsp;B. Name, Anschrift oder E-Mail-Adressen) erhoben werden, erfolgt dies stets auf freiwilliger Basis.</p>
 
       <h3 class="text-xl font-semibold mt-6">Kontaktformular</h3>
-      <p>Wenn Sie über das Formular Kontakt aufnehmen, werden Ihre Angaben zur Bearbeitung der Anfrage gespeichert. Eine Weitergabe erfolgt nicht ohne Ihre Einwilligung.</p>
+      <p>Wenn Sie uns per Kontaktformular Anfragen zukommen lassen, werden Ihre Angaben aus dem Formular inklusive der von Ihnen dort angegebenen Kontaktdaten zwecks Bearbeitung der Anfrage und für den Fall von Anschlussfragen bei uns gespeichert. Diese Daten geben wir nicht ohne Ihre Einwilligung weiter.</p>
+
+      <h3 class="text-xl font-semibold mt-6">Server-Log-Files</h3>
+      <p>Der Provider der Seiten erhebt und speichert automatisch Informationen in sogenannten Server-Log Files, die Ihr Browser automatisch an uns übermittelt. Dies sind z.&nbsp;B. Browsertyp, Betriebssystem, Referrer URL, Hostname des zugreifenden Rechners und Uhrzeit der Serveranfrage. Diese Daten sind nicht bestimmten Personen zuordenbar.</p>
 
       <h3 class="text-xl font-semibold mt-6">Ihre Rechte</h3>
       <ul class="list-disc ml-6 space-y-2">
-        <li>Auskunft über gespeicherte Daten</li>
-        <li>Berichtigung, Sperrung oder Löschung</li>
-        <li>Widerruf Ihrer Einwilligung</li>
-        <li>Beschwerde bei der zuständigen Datenschutzbehörde</li>
+        <li>Auskunft über Ihre gespeicherten Daten</li>
+        <li>Berichtigung unrichtiger Daten</li>
+        <li>Löschung Ihrer Daten, sofern keine gesetzlichen Aufbewahrungspflichten bestehen</li>
+        <li>Einschränkung der Verarbeitung</li>
+        <li>Widerspruch gegen die Verarbeitung</li>
       </ul>
 
-      <h3 class="text-xl font-semibold mt-6">SSL-Verschlüsselung</h3>
-      <p>Diese Seite nutzt eine SSL-Verschlüsselung zur sicheren Übertragung von Daten. Sie erkennen dies an der Adresszeile „https://“ und dem Schloss-Symbol im Browser.</p>
+      <h3 class="text-xl font-semibold mt-6">Cookies</h3>
+      <p>Unsere Website verwendet keine Cookies, die personenbezogene Daten speichern oder Nutzerverhalten analysieren.</p>
+
+      <p class="text-sm text-gray-600 italic">Stand: Mai 2025</p>
     </section>
   </main>
 
-  <!-- FOOTER -->
-  <footer class="bg-gray-100 text-center p-4 mt-12 text-sm">
+  <!-- Footer -->
+  <footer class="text-center text-sm text-gray-600 mt-10 mb-4">
     <p>© 2025 Elektra Polychronidou</p>
-    <div class="mt-1">
+    <p>
       <a href="impressum.html" class="text-blue-700 hover:underline">Impressum</a> |
       <a href="datenschutz.html" class="text-blue-700 hover:underline">Datenschutz</a>
-    </div>
+    </p>
   </footer>
 
-  <!-- SCRIPT -->
+  <!-- Menü-Script -->
   <script>
     document.getElementById("menu-btn").addEventListener("click", () => {
       document.getElementById("mobile-menu").classList.remove("hidden");
     });
+
     document.getElementById("close-menu").addEventListener("click", () => {
       document.getElementById("mobile-menu").classList.add("hidden");
     });
