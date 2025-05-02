@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Familien & Kinder – Ernährungsberatung</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+  <!-- Header -->
+  <header class="bg-blue-900 text-white shadow sticky top-0 z-50">
+    <div class="max-w-6xl mx-auto flex justify-between items-center px-4 py-3">
+      <a href="index.html" class="text-lg font-semibold">Ernährungsberatung<br><span class="text-sm text-blue-200">Elektra Polychronidou</span></a>
+      <nav class="hidden md:flex space-x-6">
+        <a href="index.html" class="hover:underline">Startseite</a>
+        <a href="ueber-mich.html" class="hover:underline">Über mich</a>
+        <div class="relative group">
+          <a href="beratung.html" class="hover:underline">Ernährungsberatung</a>
+          <div class="absolute hidden group-hover:block bg-white text-black mt-2 py-2 shadow-lg rounded w-56 z-50">
+            <a href="ernaehrung-bei-erkrankungen.html" class="block px-4 py-2 hover:bg-gray-100">Erkrankungen</a>
+            <a href="familien-ernaehrung.html" class="block px-4 py-2 hover:bg-gray-100">Familien & Kinder</a>
+            <a href="fastenkonzepte.html" class="block px-4 py-2 hover:bg-gray-100">Fastenkonzepte</a>
+          </div>
+        </div>
+        <a href="kosten.html" class="hover:underline">Kosten</a>
+        <a href="kontakt.html" class="hover:underline">Kontakt</a>
+      </nav>
+      <button id="menuBtn" class="text-2xl md:hidden">&#9776;</button>
+    </div>
+    <div id="mobileMenu" class="hidden md:hidden bg-blue-800 text-white px-4 pb-4">
+      <a href="index.html" class="block py-1">Startseite</a>
+      <a href="ueber-mich.html" class="block py-1">Über mich</a>
+      <a href="beratung.html" class="block py-1">Ernährungsberatung</a>
+      <div class="pl-4">
+        <a href="ernaehrung-bei-erkrankungen.html" class="block py-1">Erkrankungen</a>
+        <a href="familien-ernaehrung.html" class="block py-1">Familien & Kinder</a>
+        <a href="fastenkonzepte.html" class="block py-1">Fastenkonzepte</a>
+      </div>
+      <a href="kosten.html" class="block py-1">Kosten</a>
+      <a href="kontakt.html" class="block py-1">Kontakt</a>
+    </div>
+  </header>
+
+  <!-- Main -->
+  <main class="max-w-4xl mx-auto py-10 px-4">
+    <h1 class="text-2xl font-bold mb-4">Ernährung für Familien & Kinder</h1>
+    <p class="mb-6">
+      Eine gesunde Ernährung von Anfang an schafft wichtige Grundlagen für das gesamte Leben. Ich unterstütze Familien, Kinder und Jugendliche dabei, positive Essgewohnheiten zu entwickeln – genussvoll, alltagstauglich und frei von Zwängen.
+    </p>
+
+    <h2 class="text-xl font-semibold mb-2 text-blue-800">Kinderernährung im Fokus</h2>
+    <p class="mb-4">
+      Gerade im Kindesalter beeinflusst Ernährung nicht nur das Wachstum, sondern auch die Konzentration, Stimmung und das Immunsystem. Mein Ansatz: Kein erhobener Zeigefinger – sondern praxisnahe Strategien für mehr Vielfalt und Freude am Essen.
+    </p>
+    <ul class="list-disc list-inside mb-6">
+      <li>Ideen für ausgewogene Familienmahlzeiten</li>
+      <li>Gesunde Lunchboxen & Frühstückstipps</li>
+      <li>Umgang mit Süßigkeiten – realistisch & entspannt</li>
+      <li>Vegetarische oder vegane Ernährung für Kinder</li>
+    </ul>
+
+    <h2 class="text-xl font-semibold mb-2 text-blue-800">Ernährung in der Familie</h2>
+    <p class="mb-4">
+      Ob Kleinkindphase, Schuleintritt oder Teenagerjahre – in jeder Lebensphase stellen sich neue Fragen rund um Ernährung. Ich begleite Sie individuell:
+    </p>
+    <ul class="list-disc list-inside mb-6">
+      <li>Familienernährung mit wenig Zeit & Budget</li>
+      <li>Wählerisches Essverhalten ("Picky Eating")</li>
+      <li>Übergewicht bei Jugendlichen mit einfühlsamer Begleitung</li>
+      <li>Elterncoaching für entspannte Mahlzeiten</li>
+    </ul>
+
+    <div class="bg-yellow-100 p-4 rounded shadow">
+      <p class="mb-2"><strong>Extra:</strong> Auf Wunsch biete ich auch Workshops in Kitas, Schulen oder Einrichtungen an – spielerisch & altersgerecht.</p>
+      <a href="kontakt.html" class="inline-block mt-3 bg-blue-700 text-white px-4 py-2 rounded hover:bg-blue-800">Jetzt Beratung anfragen</a>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-gray-100 text-center text-sm py-4 mt-10 border-t">
+    <p>© 2025 Elektra Polychronidou</p>
+    <a href="impressum.html" class="text-blue-600 hover:underline">Impressum</a> |
+    <a href="datenschutz.html" class="text-blue-600 hover:underline">Datenschutz</a>
+  </footer>
+
+  <script>
+    const menuBtn = document.getElementById("menuBtn");
+    const mobileMenu = document.getElementById("mobileMenu");
+    menuBtn.addEventListener("click", () => {
+      mobileMenu.classList.toggle("hidden");
+    });
+  </script>
+</body>
+</html>
