@@ -3,104 +3,104 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Über mich – Elektra Polychronidou</title>
+  <title>Über mich – Ernährungsberatung</title>
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="bg-white text-gray-900">
-  <!-- HEADER -->
-  <header class="bg-blue-700 text-white p-4 flex items-center justify-between relative z-50">
-    <a href="index.html" class="block">
-      <div>
-        <h1 class="text-xl font-bold">Ernährungsberatung</h1>
-        <p class="text-sm">Elektra Polychronidou</p>
-      </div>
+<body class="bg-gray-50 text-gray-800">
+
+  <!-- Header -->
+  <header class="bg-blue-900 text-white p-4 flex justify-between items-center">
+    <a href="index.html" class="flex flex-col">
+      <h1 class="text-xl font-semibold">Ernährungsberatung</h1>
+      <p class="text-sm text-blue-200">Elektra Polychronidou</p>
     </a>
-    <button id="menu-btn" class="text-white text-3xl md:hidden">
-      &#9776;
-    </button>
-    <nav class="hidden md:flex space-x-6 text-white">
-      <a href="index.html" class="hover:underline">Startseite</a>
+
+    <!-- Desktop Nav -->
+    <nav class="hidden md:flex space-x-6">
+      <a href="index.html">Startseite</a>
       <a href="ueber-mich.html" class="underline">Über mich</a>
-      <a href="beratung.html" class="hover:underline">Ernährungsberatung</a>
-      <a href="kosten.html" class="hover:underline">Kosten</a>
-      <a href="kontakt.html" class="hover:underline">Kontakt</a>
+      <a href="beratung.html">Ernährungsberatung</a>
+      <a href="kosten.html">Kosten</a>
+      <a href="kontakt.html">Kontakt</a>
     </nav>
+
+    <!-- Mobile Menübutton -->
+    <button id="menu-btn" class="text-3xl md:hidden" aria-label="Menü öffnen">&#9776;</button>
   </header>
 
-  <!-- OVERLAY MENU -->
-  <div id="mobile-menu" class="fixed inset-0 bg-black bg-opacity-90 text-white hidden z-40 flex-col items-center justify-center text-xl space-y-6">
-    <button id="close-menu" class="absolute top-4 right-6 text-4xl">&times;</button>
-    <a href="index.html" class="underline">Startseite</a>
-    <a href="ueber-mich.html">Über mich</a>
-    <a href="beratung.html">Ernährungsberatung</a>
-    <a href="kosten.html">Kosten</a>
-    <a href="kontakt.html">Kontakt</a>
+  <!-- Mobile Menü -->
+  <div id="mobile-menu" class="hidden fixed inset-0 bg-black bg-opacity-90 text-white z-50 flex flex-col items-center justify-center space-y-6">
+    <button id="close-menu" class="absolute top-4 right-6 text-4xl" aria-label="Menü schließen">&times;</button>
+    <nav class="flex flex-col space-y-4 text-xl text-center">
+      <a href="index.html">Startseite</a>
+      <a href="ueber-mich.html" class="underline">Über mich</a>
+      <a href="beratung.html">Ernährungsberatung</a>
+      <a href="kosten.html">Kosten</a>
+      <a href="kontakt.html">Kontakt</a>
+    </nav>
   </div>
 
-  <!-- MAIN -->
-  <main class="max-w-3xl mx-auto px-4 py-8">
-    <section class="mb-10">
-      <div class="rounded-lg overflow-hidden shadow">
-        <img src="EP-Beratung.jpg" alt="Elektra Polychronidou" class="w-full object-cover" />
+  <!-- Inhalt -->
+  <main class="max-w-4xl mx-auto mt-6 p-4 bg-white shadow rounded-lg">
+    <section class="flex flex-col md:flex-row gap-6 mb-8">
+      <img src="EP-Beratung.jpg" alt="Elektra Polychronidou" class="w-full md:w-1/3 rounded-lg object-cover" />
+      <div>
+        <h2 class="text-2xl font-semibold mb-3">Über mich</h2>
+        <p class="mb-3">Mein Name ist Elektra Polychronidou. Ich bin staatlich anerkannte Ernährungsberaterin mit langjähriger Erfahrung in der individuellen Beratung von Menschen mit verschiedensten gesundheitlichen Bedürfnissen.</p>
+        <p class="mb-3">Mein Weg führte mich über ein naturwissenschaftliches Studium, berufliche Stationen im Gesundheitswesen und zahlreiche Fortbildungen hin zu meiner heutigen Tätigkeit. Ich verbinde wissenschaftlich fundierte Ansätze mit einem empathischen Blick für den Menschen.</p>
+        <p>Besonders am Herzen liegt mir die Unterstützung von Menschen mit chronischen Erkrankungen wie Rheuma, Jugendlichen mit Übergewicht sowie Personen mit Nahrungsmittelunverträglichkeiten.</p>
       </div>
-      <h2 class="text-2xl font-bold mt-6 mb-4">Über mich</h2>
-      <p class="mb-4">
-        Mein Name ist Elektra Polychronidou. Ich bin staatlich anerkannte Ernährungsberaterin mit langjähriger Erfahrung in der individuellen Beratung von Menschen mit verschiedensten gesundheitlichen Bedürfnissen.
-      </p>
-      <p class="mb-4">
-        Mein Weg führte mich über ein naturwissenschaftliches Studium, berufliche Stationen im Gesundheitswesen und zahlreiche Fortbildungen hin zu meiner heutigen Tätigkeit. Ich verbinde wissenschaftlich fundierte Ansätze mit einem empathischen Blick für den Menschen.
-      </p>
-      <p class="mb-4">
-        Besonders am Herzen liegt mir die Unterstützung von Menschen mit chronischen Erkrankungen wie Rheuma, Jugendlichen mit Übergewicht sowie Personen mit Nahrungsmittelunverträglichkeiten.
-      </p>
     </section>
 
-    <section class="mb-10">
-      <h3 class="text-xl font-semibold mb-2">Mein beruflicher Weg</h3>
-      <ul class="list-disc pl-5 space-y-1">
-        <li><strong>Seit 2018:</strong> Leitende Diätassistentin am Immanuel Krankenhaus Berlin, Naturheilkunde</li>
-        <li><strong>Seit 2003:</strong> Ernährungsberaterin für Erwachsene & Kinder – u.a. Charité, Krankenkassen</li>
-        <li><strong>2005–2015:</strong> Medienarbeit: Ernährungsexpertin für ARD, Spiegel Online u.a.</li>
-        <li><strong>2009–2016:</strong> Studienarbeit u.a. am Deutschen Institut für Ernährungsforschung (DIfE)</li>
-        <li><strong>Seit 2007:</strong> Dozentin für Ernährung & Gesundheitsförderung – VHS, Schulen, Institute</li>
-        <li><strong>Regelmäßige Mitwirkung an Studien:</strong> Charité, NeuroCure, Bundesinstitut für Risikobewertung</li>
-      </ul>
-    </section>
+    <section class="space-y-6">
+      <div>
+        <h3 class="text-xl font-semibold mb-2">Mein beruflicher Weg</h3>
+        <ul class="list-disc list-inside space-y-1">
+          <li><strong>Seit 2018:</strong> Leitende Diätassistentin am Immanuel Krankenhaus Berlin, Naturheilkunde</li>
+          <li><strong>Seit 2003:</strong> Ernährungsberaterin für Erwachsene & Kinder – u.a. Charité, Krankenkassen</li>
+          <li><strong>2005–2015:</strong> Medienarbeit: Ernährungsexpertin für ARD, Spiegel Online u.a.</li>
+          <li><strong>2009–2016:</strong> Studienarbeit u.a. am Deutschen Institut für Ernährungsforschung (DIfE)</li>
+          <li><strong>Seit 2007:</strong> Dozentin für Ernährung & Gesundheitsförderung – VHS, Schulen, Institute</li>
+          <li><strong>Regelmäßige Mitwirkung an Studien:</strong> Charité, NeuroCure, Bundesinstitut für Risikobewertung</li>
+        </ul>
+      </div>
 
-    <section class="mb-10">
-      <h3 class="text-xl font-semibold mb-2">Ausbildung & Qualifikation</h3>
-      <ul class="list-disc pl-5 space-y-1">
-        <li><strong>1995:</strong> Staatlich geprüfte Diätassistentin (UK Rudolf Virchow, Berlin)</li>
-        <li><strong>1985–1992:</strong> Lebensmittelchemie (Grund- und Hauptstudium, TU Berlin)</li>
-        <li><strong>Zusätzliche Qualifikationen:</strong> Ernährungsberaterin, Fastenleiterin, Anti-Diät-Coaching</li>
-        <li><strong>Laufende Fortbildungen:</strong> u.a. DGE, UGB, Deutsche Fastenakademie, NAKO</li>
-      </ul>
-    </section>
+      <div>
+        <h3 class="text-xl font-semibold mb-2">Ausbildung & Qualifikation</h3>
+        <ul class="list-disc list-inside space-y-1">
+          <li><strong>1995:</strong> Staatlich geprüfte Diätassistentin (UK Rudolf Virchow, Berlin)</li>
+          <li><strong>1985–1992:</strong> Lebensmittelchemie (Grund- und Hauptstudium, TU Berlin)</li>
+          <li><strong>Zusätzliche Qualifikationen:</strong> Ernährungsberaterin, Fastenleiterin, Anti-Diät-Coaching</li>
+          <li><strong>Laufende Fortbildungen:</strong> u.a. DGE, UGB, Deutsche Fastenakademie, NAKO</li>
+        </ul>
+      </div>
 
-    <section>
-      <h3 class="text-xl font-semibold mb-2">Schwerpunkte & Erfahrungen</h3>
-      <ul class="list-disc pl-5 space-y-1">
-        <li>Ernährungstherapie bei Rheuma, MS, Adipositas & Kinderernährung</li>
-        <li>Interdisziplinäre Beratung in Klinik- und Forschungskontexten</li>
-        <li>Langjährige Lehrerfahrung in Theorie & Praxis der Diätetik</li>
-      </ul>
+      <div>
+        <h3 class="text-xl font-semibold mb-2">Schwerpunkte & Erfahrungen</h3>
+        <ul class="list-disc list-inside space-y-1">
+          <li>Ernährungstherapie bei Rheuma, MS, Adipositas & Kinderernährung</li>
+          <li>Interdisziplinäre Beratung in Klinik- und Forschungskontexten</li>
+          <li>Langjährige Lehrerfahrung in Theorie & Praxis der Diätetik</li>
+        </ul>
+      </div>
     </section>
   </main>
 
-  <!-- FOOTER -->
-  <footer class="bg-gray-100 text-center p-4 mt-12 text-sm">
+  <!-- Footer -->
+  <footer class="text-center text-sm text-gray-600 mt-10 mb-4">
     <p>© 2025 Elektra Polychronidou</p>
-    <div class="mt-1">
+    <p>
       <a href="impressum.html" class="text-blue-700 hover:underline">Impressum</a> |
       <a href="datenschutz.html" class="text-blue-700 hover:underline">Datenschutz</a>
-    </div>
+    </p>
   </footer>
 
-  <!-- SCRIPT -->
+  <!-- JS für Menü -->
   <script>
     document.getElementById("menu-btn").addEventListener("click", () => {
       document.getElementById("mobile-menu").classList.remove("hidden");
     });
+
     document.getElementById("close-menu").addEventListener("click", () => {
       document.getElementById("mobile-menu").classList.add("hidden");
     });
