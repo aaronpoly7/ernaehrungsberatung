@@ -3,68 +3,63 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Danke – Nachricht gesendet</title>
-  <link rel="stylesheet" href="style.css" />
+  <title>Danke – Elektra Polychronidou</title>
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
-  <header class="site-header">
-    <div class="header-left">
-      <h1>Ernährungsberatung</h1>
-      <p class="subtitle">Elektra Polychronidou</p>
-    </div>
-    <nav class="main-nav">
+<body class="bg-white text-gray-900">
+  <!-- HEADER -->
+  <header class="bg-blue-700 text-white p-4 flex items-center justify-between relative z-50">
+    <a href="index.html" class="block">
+      <div>
+        <h1 class="text-xl font-bold">Ernährungsberatung</h1>
+        <p class="text-sm">Elektra Polychronidou</p>
+      </div>
+    </a>
+    <button id="menu-btn" class="text-white text-3xl md:hidden">&#9776;</button>
+    <nav class="hidden md:flex space-x-6 text-white">
       <a href="index.html">Startseite</a>
       <a href="ueber-mich.html">Über mich</a>
       <a href="beratung.html">Ernährungsberatung</a>
       <a href="kosten.html">Kosten</a>
       <a href="kontakt.html">Kontakt</a>
     </nav>
-    <button class="menu-button" aria-label="Menü öffnen">&#9776;</button>
   </header>
 
-  <div class="overlay-menu" id="menu">
-    <button class="close-button" aria-label="Menü schließen">&times;</button>
-    <nav class="overlay-nav">
-      <a href="index.html">Startseite</a>
-      <a href="ueber-mich.html">Über mich</a>
-      <a href="beratung.html">Ernährungsberatung</a>
-      <a href="kosten.html">Kosten</a>
-      <a href="kontakt.html">Kontakt</a>
-    </nav>
+  <!-- MOBILE MENU -->
+  <div id="mobile-menu" class="fixed inset-0 bg-black bg-opacity-90 text-white hidden z-40 flex-col items-center justify-center text-xl space-y-6">
+    <button id="close-menu" class="absolute top-4 right-6 text-4xl">&times;</button>
+    <a href="index.html">Startseite</a>
+    <a href="ueber-mich.html">Über mich</a>
+    <a href="beratung.html">Ernährungsberatung</a>
+    <a href="kosten.html">Kosten</a>
+    <a href="kontakt.html">Kontakt</a>
   </div>
 
-  <main class="content">
-    <section class="text-section">
-      <h2>Vielen Dank!</h2>
-      <p>Ihre Nachricht wurde erfolgreich übermittelt. Ich melde mich so bald wie möglich bei Ihnen.</p>
-      <p><a href="index.html">Zurück zur Startseite</a></p>
-    </section>
+  <!-- MAIN -->
+  <main class="max-w-xl mx-auto px-4 py-20 text-center space-y-6">
+    <h2 class="text-3xl font-bold text-green-600">Vielen Dank für Ihre Nachricht!</h2>
+    <p class="text-lg">Ich werde mich so bald wie möglich bei Ihnen melden.</p>
+    <a href="index.html" class="inline-block mt-6 px-6 py-3 bg-blue-700 text-white rounded hover:bg-blue-800 transition">
+      Zurück zur Startseite
+    </a>
   </main>
 
-  <footer class="site-footer">
-    <p>&copy; 2025 Elektra Polychronidou</p>
-    <a href="impressum.html">Impressum</a> |
-    <a href="datenschutz.html">Datenschutz</a>
+  <!-- FOOTER -->
+  <footer class="bg-gray-100 text-center p-4 text-sm">
+    <p>© 2025 Elektra Polychronidou</p>
+    <div class="mt-1">
+      <a href="impressum.html" class="text-blue-700 hover:underline">Impressum</a> |
+      <a href="datenschutz.html" class="text-blue-700 hover:underline">Datenschutz</a>
+    </div>
   </footer>
 
+  <!-- SCRIPT -->
   <script>
-    const menu = document.getElementById("menu");
-    const openBtn = document.querySelector(".menu-button");
-    const closeBtn = document.querySelector(".close-button");
-    const links = document.querySelectorAll(".overlay-nav a");
-
-    openBtn.addEventListener("click", () => {
-      menu.classList.add("show");
+    document.getElementById("menu-btn").addEventListener("click", () => {
+      document.getElementById("mobile-menu").classList.remove("hidden");
     });
-
-    closeBtn.addEventListener("click", () => {
-      menu.classList.remove("show");
-    });
-
-    links.forEach(link => {
-      link.addEventListener("click", () => {
-        menu.classList.remove("show");
-      });
+    document.getElementById("close-menu").addEventListener("click", () => {
+      document.getElementById("mobile-menu").classList.add("hidden");
     });
   </script>
 </body>
